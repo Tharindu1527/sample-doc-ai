@@ -26,7 +26,10 @@ interface AuthActions {
 
 type AuthStore = AuthState & AuthActions;
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+// FIXED: Use proxy URL in development
+const API_BASE_URL = process.env.NODE_ENV === 'development' 
+  ? '' // Use proxy in package.json
+  : (process.env.REACT_APP_API_URL || 'http://localhost:8000');
 
 // Helper function to make authenticated requests
 const makeAuthenticatedRequest = async (url: string, options: RequestInit = {}, token?: string) => {
@@ -39,14 +42,18 @@ const makeAuthenticatedRequest = async (url: string, options: RequestInit = {}, 
     headers['Authorization'] = `Bearer ${token}`;
   }
 
+  console.log(`Making request to: ${API_BASE_URL}${url}`);
+  
   const response = await fetch(`${API_BASE_URL}${url}`, {
     ...options,
     headers,
   });
 
+  console.log(`Response status: ${response.status} ${response.statusText}`);
+
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({ detail: 'An error occurred' }));
-    throw new Error(errorData.detail || 'Request failed');
+    throw new Error(errorData.detail || `HTTP ${response.status}: ${response.statusText}`);
   }
 
   return response.json();
@@ -82,9 +89,15 @@ export const useAuthStore = create<AuthStore>()(
             error: null,
           });
         } catch (error) {
+          const errorMessage = error instanceof Error ? error.message : 'Login failed';
+          console.error('Login error:', errorMessage);
           set({
-            error: { message: error instanceof Error ? error.message : 'Login failed' },
+            error: { message: errorMessage },
             isLoading: false,
+            isAuthenticated: false,
+            user: null,
+            accessToken: null,
+            refreshToken: null,
           });
           throw error;
         }
@@ -94,23 +107,41 @@ export const useAuthStore = create<AuthStore>()(
         try {
           set({ isLoading: true, error: null });
 
+          console.log('Registration data:', data);
+
           const response = await makeAuthenticatedRequest('/api/auth/register', {
             method: 'POST',
             body: JSON.stringify(data),
           });
 
+          console.log('Registration response:', response);
+
+          // Update state with new user
+          set({
+            user: response,
+            isLoading: false,
+            error: null,
+          });
+
           // After registration, automatically log in
           await get().login(data.email, data.password);
         } catch (error) {
+          const errorMessage = error instanceof Error ? error.message : 'Registration failed';
+          console.error('Registration error:', errorMessage);
           set({
-            error: { message: error instanceof Error ? error.message : 'Registration failed' },
+            error: { message: errorMessage },
             isLoading: false,
+            isAuthenticated: false,
+            user: null,
+            accessToken: null,
+            refreshToken: null,
           });
           throw error;
         }
       },
 
       logout: () => {
+        console.log('Logging out user');
         set({
           user: null,
           accessToken: null,
@@ -137,6 +168,7 @@ export const useAuthStore = create<AuthStore>()(
             error: null,
           });
         } catch (error) {
+          console.error('Token refresh error:', error);
           // If refresh fails, logout
           get().logout();
           throw error;
@@ -159,8 +191,9 @@ export const useAuthStore = create<AuthStore>()(
             user: state.user ? { ...state.user, ...response } : null,
           }));
         } catch (error) {
+          const errorMessage = error instanceof Error ? error.message : 'Update failed';
           set({
-            error: { message: error instanceof Error ? error.message : 'Update failed' },
+            error: { message: errorMessage },
           });
           throw error;
         }
@@ -183,8 +216,9 @@ export const useAuthStore = create<AuthStore>()(
 
           set({ error: null });
         } catch (error) {
+          const errorMessage = error instanceof Error ? error.message : 'Password change failed';
           set({
-            error: { message: error instanceof Error ? error.message : 'Password change failed' },
+            error: { message: errorMessage },
           });
           throw error;
         }
@@ -194,6 +228,7 @@ export const useAuthStore = create<AuthStore>()(
         try {
           const { accessToken } = get();
           if (!accessToken) {
+            console.log('No access token available');
             return;
           }
 
@@ -207,11 +242,13 @@ export const useAuthStore = create<AuthStore>()(
             error: null,
           });
         } catch (error) {
+          console.log('Auth check failed, attempting token refresh...');
           // Try to refresh token
           try {
             await get().refreshTokens();
             await get().checkAuth();
           } catch (refreshError) {
+            console.log('Token refresh failed, logging out');
             get().logout();
           }
         }

@@ -1265,3 +1265,403 @@ total_reviews
 2025-09-17 11:54:18,805 - main - INFO - Database connection established
 2025-09-17 11:54:18,846 - main - WARNING - Could not create default users: No module named 'jwt'
 2025-09-17 11:54:18,848 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 12:34:53,443 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 12:34:53,521 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 12:34:53,521 - main - INFO - Database connection closed
+2025-09-17 12:36:13,487 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-17 12:36:14,655 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 12:36:15,086 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 12:36:15,087 - main - INFO - Database connection established
+2025-09-17 12:36:15,099 - main - WARNING - Could not create default users: No module named 'jwt'
+2025-09-17 12:36:15,121 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 12:39:35,958 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 12:39:36,062 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 12:39:36,062 - main - INFO - Database connection closed
+2025-09-17 12:39:38,565 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-17 12:39:39,534 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 12:39:39,983 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 12:39:39,983 - main - INFO - Database connection established
+2025-09-17 12:39:39,998 - main - WARNING - Could not create default users: No module named 'jwt'
+2025-09-17 12:39:40,001 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 12:39:57,692 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 12:39:57,771 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 12:39:57,771 - main - INFO - Database connection closed
+2025-09-17 12:39:58,992 - main - INFO - Loading routers...
+2025-09-17 12:39:59,023 - main - ERROR - Traceback (most recent call last):
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 946, in import_email_validator
+    import email_validator
+ModuleNotFoundError: No module named 'email_validator'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\My projects\AI DOk\AI-DOC\backend\main.py", line 139, in <module>
+    from api.auth import router as auth_router
+  File "D:\My projects\AI DOk\AI-DOC\backend\api\auth.py", line 6, in <module>
+    from models.user import (
+  File "D:\My projects\AI DOk\AI-DOC\backend\models\user.py", line 13, in <module>
+    class User(BaseModel):
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_model_construction.py", line 237, in __new__
+    complete_model_class(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_model_construction.py", line 597, in complete_model_class
+    schema = gen_schema.generate_schema(cls)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 711, in generate_schema
+    schema = self._generate_schema_inner(obj)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1004, in _generate_schema_inner
+    return self._model_schema(obj)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 837, in _model_schema
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 837, in <dictcomp>
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1206, in _generate_md_field_schema
+    common_field = self._common_field_schema(name, field_info, decorators)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1372, in _common_field_schema
+    schema = self._apply_annotations(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 2297, in _apply_annotations
+    schema = get_inner_schema(source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 83, in __call__
+    schema = self._handler(source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 2276, in inner_handler
+    schema = self._generate_schema_from_get_schema_method(obj, source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 900, in _generate_schema_from_get_schema_method
+    schema = get_schema(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 986, in __get_pydantic_core_schema__
+    import_email_validator()
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 948, in import_email_validator
+    raise ImportError('email-validator is not installed, run `pip install pydantic[email]`') from e
+ImportError: email-validator is not installed, run `pip install pydantic[email]`
+
+2025-09-17 12:40:00,181 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-17 12:40:01,092 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 12:40:01,540 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 12:40:01,540 - main - INFO - Database connection established
+2025-09-17 12:40:01,544 - main - WARNING - Could not create default users: No module named 'jwt'
+2025-09-17 12:40:01,544 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 12:40:19,570 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 12:40:19,638 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 12:40:19,638 - main - INFO - Database connection closed
+2025-09-17 12:40:20,706 - main - INFO - Loading routers...
+2025-09-17 12:40:20,724 - main - ERROR - Traceback (most recent call last):
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 946, in import_email_validator
+    import email_validator
+ModuleNotFoundError: No module named 'email_validator'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\My projects\AI DOk\AI-DOC\backend\main.py", line 139, in <module>
+    from api.auth import router as auth_router
+  File "D:\My projects\AI DOk\AI-DOC\backend\api\auth.py", line 6, in <module>
+    from models.user import (
+  File "D:\My projects\AI DOk\AI-DOC\backend\models\user.py", line 13, in <module>
+    class User(BaseModel):
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_model_construction.py", line 237, in __new__
+    complete_model_class(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_model_construction.py", line 597, in complete_model_class
+    schema = gen_schema.generate_schema(cls)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 711, in generate_schema
+    schema = self._generate_schema_inner(obj)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1004, in _generate_schema_inner
+    return self._model_schema(obj)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 837, in _model_schema
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 837, in <dictcomp>
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1206, in _generate_md_field_schema
+    common_field = self._common_field_schema(name, field_info, decorators)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1372, in _common_field_schema
+    schema = self._apply_annotations(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 2297, in _apply_annotations
+    schema = get_inner_schema(source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 83, in __call__
+    schema = self._handler(source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 2276, in inner_handler
+    schema = self._generate_schema_from_get_schema_method(obj, source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 900, in _generate_schema_from_get_schema_method
+    schema = get_schema(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 986, in __get_pydantic_core_schema__
+    import_email_validator()
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 948, in import_email_validator
+    raise ImportError('email-validator is not installed, run `pip install pydantic[email]`') from e
+ImportError: email-validator is not installed, run `pip install pydantic[email]`
+
+2025-09-17 12:40:21,885 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-17 12:40:22,834 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 12:40:23,313 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 12:40:23,313 - main - INFO - Database connection established
+2025-09-17 12:40:23,320 - main - WARNING - Could not create default users: No module named 'jwt'
+2025-09-17 12:40:23,331 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 12:40:47,491 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 12:40:47,576 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 12:40:47,576 - main - INFO - Database connection closed
+2025-09-17 12:40:48,874 - main - INFO - Loading routers...
+2025-09-17 12:40:48,899 - main - ERROR - Traceback (most recent call last):
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 946, in import_email_validator
+    import email_validator
+ModuleNotFoundError: No module named 'email_validator'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\My projects\AI DOk\AI-DOC\backend\main.py", line 139, in <module>
+    from api.auth import router as auth_router
+  File "D:\My projects\AI DOk\AI-DOC\backend\api\auth.py", line 6, in <module>
+    from models.user import (
+  File "D:\My projects\AI DOk\AI-DOC\backend\models\user.py", line 13, in <module>
+    class User(BaseModel):
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_model_construction.py", line 237, in __new__
+    complete_model_class(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_model_construction.py", line 597, in complete_model_class
+    schema = gen_schema.generate_schema(cls)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 711, in generate_schema
+    schema = self._generate_schema_inner(obj)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1004, in _generate_schema_inner
+    return self._model_schema(obj)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 837, in _model_schema
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 837, in <dictcomp>
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1206, in _generate_md_field_schema
+    common_field = self._common_field_schema(name, field_info, decorators)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1372, in _common_field_schema
+    schema = self._apply_annotations(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 2297, in _apply_annotations
+    schema = get_inner_schema(source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 83, in __call__
+    schema = self._handler(source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 2276, in inner_handler
+    schema = self._generate_schema_from_get_schema_method(obj, source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 900, in _generate_schema_from_get_schema_method
+    schema = get_schema(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 986, in __get_pydantic_core_schema__
+    import_email_validator()
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 948, in import_email_validator
+    raise ImportError('email-validator is not installed, run `pip install pydantic[email]`') from e
+ImportError: email-validator is not installed, run `pip install pydantic[email]`
+
+2025-09-17 12:40:50,022 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-17 12:40:50,887 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 12:40:51,302 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 12:40:51,318 - main - INFO - Database connection established
+2025-09-17 12:40:51,319 - main - WARNING - Could not create default users: No module named 'jwt'
+2025-09-17 12:40:51,322 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 12:42:47,078 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 12:42:47,162 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 12:42:47,162 - main - INFO - Database connection closed
+2025-09-17 12:43:10,807 - main - INFO - Loading routers...
+2025-09-17 12:43:10,844 - main - ERROR - Traceback (most recent call last):
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 946, in import_email_validator
+    import email_validator
+ModuleNotFoundError: No module named 'email_validator'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\My projects\AI DOk\AI-DOC\backend\main.py", line 139, in <module>
+    from api.auth import router as auth_router
+  File "D:\My projects\AI DOk\AI-DOC\backend\api\auth.py", line 6, in <module>
+    from models.user import (
+  File "D:\My projects\AI DOk\AI-DOC\backend\models\user.py", line 13, in <module>
+    class User(BaseModel):
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_model_construction.py", line 237, in __new__
+    complete_model_class(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_model_construction.py", line 597, in complete_model_class
+    schema = gen_schema.generate_schema(cls)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 711, in generate_schema
+    schema = self._generate_schema_inner(obj)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1004, in _generate_schema_inner
+    return self._model_schema(obj)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 837, in _model_schema
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 837, in <dictcomp>
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1206, in _generate_md_field_schema
+    common_field = self._common_field_schema(name, field_info, decorators)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1372, in _common_field_schema
+    schema = self._apply_annotations(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 2297, in _apply_annotations
+    schema = get_inner_schema(source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 83, in __call__
+    schema = self._handler(source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 2276, in inner_handler
+    schema = self._generate_schema_from_get_schema_method(obj, source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 900, in _generate_schema_from_get_schema_method
+    schema = get_schema(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 986, in __get_pydantic_core_schema__
+    import_email_validator()
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 948, in import_email_validator
+    raise ImportError('email-validator is not installed, run `pip install pydantic[email]`') from e
+ImportError: email-validator is not installed, run `pip install pydantic[email]`
+
+2025-09-17 12:43:11,888 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-17 12:43:12,773 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 12:43:13,203 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 12:43:13,204 - main - INFO - Database connection established
+2025-09-17 12:43:13,212 - main - WARNING - Could not create default users: email-validator is not installed, run `pip install pydantic[email]`
+2025-09-17 12:43:13,214 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 12:43:55,150 - main - ERROR - Auth service health check failed: email-validator is not installed, run `pip install pydantic[email]`
+2025-09-17 12:45:42,666 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 12:45:42,751 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 12:45:42,752 - main - INFO - Database connection closed
+2025-09-17 12:45:44,850 - main - INFO - Loading routers...
+2025-09-17 12:45:44,866 - main - ERROR - Traceback (most recent call last):
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 946, in import_email_validator
+    import email_validator
+ModuleNotFoundError: No module named 'email_validator'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\My projects\AI DOk\AI-DOC\backend\main.py", line 139, in <module>
+    from api.auth import router as auth_router
+  File "D:\My projects\AI DOk\AI-DOC\backend\api\auth.py", line 6, in <module>
+    from models.user import (
+  File "D:\My projects\AI DOk\AI-DOC\backend\models\user.py", line 13, in <module>
+    class User(BaseModel):
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_model_construction.py", line 237, in __new__
+    complete_model_class(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_model_construction.py", line 597, in complete_model_class
+    schema = gen_schema.generate_schema(cls)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 711, in generate_schema
+    schema = self._generate_schema_inner(obj)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1004, in _generate_schema_inner
+    return self._model_schema(obj)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 837, in _model_schema
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 837, in <dictcomp>
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1206, in _generate_md_field_schema
+    common_field = self._common_field_schema(name, field_info, decorators)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1372, in _common_field_schema
+    schema = self._apply_annotations(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 2297, in _apply_annotations
+    schema = get_inner_schema(source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 83, in __call__
+    schema = self._handler(source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 2276, in inner_handler
+    schema = self._generate_schema_from_get_schema_method(obj, source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 900, in _generate_schema_from_get_schema_method
+    schema = get_schema(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 986, in __get_pydantic_core_schema__
+    import_email_validator()
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 948, in import_email_validator
+    raise ImportError('email-validator is not installed, run `pip install pydantic[email]`') from e
+ImportError: email-validator is not installed, run `pip install pydantic[email]`
+
+2025-09-17 12:45:45,932 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-17 12:45:46,880 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 12:45:47,343 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 12:45:47,343 - main - INFO - Database connection established
+2025-09-17 12:45:47,352 - main - WARNING - Could not create default users: email-validator is not installed, run `pip install pydantic[email]`
+2025-09-17 12:45:47,353 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 12:50:03,544 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 12:50:03,603 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 12:50:03,603 - main - INFO - Database connection closed
+2025-09-17 12:50:05,970 - main - INFO - Loading routers...
+2025-09-17 12:50:05,991 - main - ERROR - Traceback (most recent call last):
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 946, in import_email_validator
+    import email_validator
+ModuleNotFoundError: No module named 'email_validator'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\My projects\AI DOk\AI-DOC\backend\main.py", line 139, in <module>
+    from api.auth import router as auth_router
+  File "D:\My projects\AI DOk\AI-DOC\backend\api\auth.py", line 6, in <module>
+    from models.user import (
+  File "D:\My projects\AI DOk\AI-DOC\backend\models\user.py", line 13, in <module>
+    class User(BaseModel):
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_model_construction.py", line 237, in __new__
+    complete_model_class(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_model_construction.py", line 597, in complete_model_class
+    schema = gen_schema.generate_schema(cls)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 711, in generate_schema
+    schema = self._generate_schema_inner(obj)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1004, in _generate_schema_inner
+    return self._model_schema(obj)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 837, in _model_schema
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 837, in <dictcomp>
+    {k: self._generate_md_field_schema(k, v, decorators) for k, v in fields.items()},
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1206, in _generate_md_field_schema
+    common_field = self._common_field_schema(name, field_info, decorators)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 1372, in _common_field_schema
+    schema = self._apply_annotations(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 2297, in _apply_annotations
+    schema = get_inner_schema(source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 83, in __call__
+    schema = self._handler(source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 2276, in inner_handler
+    schema = self._generate_schema_from_get_schema_method(obj, source_type)
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\_internal\_generate_schema.py", line 900, in _generate_schema_from_get_schema_method
+    schema = get_schema(
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 986, in __get_pydantic_core_schema__
+    import_email_validator()
+  File "D:\My projects\AI DOk\AI-DOC\backend\venv\lib\site-packages\pydantic\networks.py", line 948, in import_email_validator
+    raise ImportError('email-validator is not installed, run `pip install pydantic[email]`') from e
+ImportError: email-validator is not installed, run `pip install pydantic[email]`
+
+2025-09-17 12:50:07,076 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-17 12:50:07,926 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 12:50:08,333 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 12:50:08,333 - main - INFO - Database connection established
+2025-09-17 12:50:08,341 - main - WARNING - Could not create default users: email-validator is not installed, run `pip install pydantic[email]`
+2025-09-17 12:50:08,342 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 12:52:23,887 - main - INFO - ✓ router loaded successfully
+2025-09-17 12:52:23,948 - main - INFO - ✓ router loaded successfully
+2025-09-17 12:52:23,957 - main - INFO - ✓ router loaded successfully
+2025-09-17 12:52:24,000 - main - INFO - ✓ router loaded successfully
+2025-09-17 12:52:24,771 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-17 12:52:24,771 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-17 12:52:25,788 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 12:52:26,178 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 12:52:26,178 - main - INFO - Database connection established
+2025-09-17 12:52:26,724 - services.auth_service - INFO - User registered successfully: admin@doctalk.com
+2025-09-17 12:52:26,724 - main - INFO - Default admin user created: admin@doctalk.com
+2025-09-17 12:52:27,137 - services.auth_service - INFO - Doctor record created: D20250917A7D3CAE8
+2025-09-17 12:52:27,259 - services.auth_service - INFO - User registered successfully: doctor@doctalk.com
+2025-09-17 12:52:27,259 - main - INFO - Demo doctor user created: doctor@doctalk.com
+2025-09-17 12:52:27,694 - services.auth_service - INFO - Patient record created: P20250917D8BA6D3F
+2025-09-17 12:52:27,832 - services.auth_service - INFO - User registered successfully: patient@doctalk.com
+2025-09-17 12:52:27,833 - main - INFO - Demo patient user created: patient@doctalk.com
+2025-09-17 12:52:27,834 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 12:53:29,770 - services.auth_service - INFO - Patient record created: P20250917F3B633B9
+2025-09-17 12:53:29,912 - services.auth_service - INFO - User registered successfully: dilumu@gmail.com
+2025-09-17 12:53:29,912 - api.auth - INFO - New user registered: dilumu@gmail.com
+2025-09-17 12:53:30,248 - services.auth_service - INFO - User authenticated successfully: dilumu@gmail.com
+2025-09-17 12:53:30,262 - api.auth - ERROR - Login error: module 'jwt' has no attribute 'encode'
+2025-09-17 12:55:01,930 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 12:55:02,000 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 12:55:02,001 - main - INFO - Database connection closed
+2025-09-17 12:57:34,693 - main - INFO - ✓ router loaded successfully
+2025-09-17 12:57:34,751 - main - INFO - ✓ router loaded successfully
+2025-09-17 12:57:34,757 - main - INFO - ✓ router loaded successfully
+2025-09-17 12:57:34,797 - main - INFO - ✓ router loaded successfully
+2025-09-17 12:57:35,567 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-17 12:57:35,569 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-17 12:57:36,658 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 12:57:37,077 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 12:57:37,077 - main - INFO - Database connection established
+2025-09-17 12:57:37,267 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 12:58:11,234 - services.auth_service - INFO - Patient record created: P20250917B495D7AD
+2025-09-17 12:58:11,376 - services.auth_service - INFO - User registered successfully: dilum@gmail.com
+2025-09-17 12:58:11,376 - api.auth - INFO - New user registered: dilum@gmail.com
+2025-09-17 12:58:11,716 - services.auth_service - INFO - User authenticated successfully: dilum@gmail.com
+2025-09-17 12:58:11,716 - services.auth_service - INFO - Tokens created for user: dilum@gmail.com
+2025-09-17 12:58:11,718 - api.auth - INFO - User logged in: dilum@gmail.com
+2025-09-17 12:58:29,920 - api.voice - INFO - WebSocket client disconnected
+2025-09-17 15:12:00,917 - services.auth_service - ERROR - JWT decoding error with PyJWT: Signature has expired
+2025-09-17 15:12:00,936 - services.auth_service - ERROR - JWT decoding error with python-jose: Signature has expired.
+2025-09-18 01:54:29,201 - services.auth_service - INFO - User authenticated successfully: dilum@gmail.com
+2025-09-18 01:54:29,208 - services.auth_service - INFO - Tokens created for user: dilum@gmail.com
+2025-09-18 01:54:29,208 - api.auth - INFO - User logged in: dilum@gmail.com
+2025-09-18 01:54:42,235 - services.voice_service - INFO - Transcription confidence: 0.98239446
+2025-09-18 01:54:42,235 - services.voice_service - INFO - Transcribed: I want to schedule an appointment.
+2025-09-18 01:54:42,235 - services.voice_service - INFO - Transcribed: I want to schedule an appointment.
+2025-09-18 01:54:47,521 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 9 credits remaining, while 649 credits are required for this request.
+2025-09-18 01:54:55,729 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 01:58:39,079 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 02:42:04,468 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 02:42:04,541 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 02:42:04,542 - main - INFO - Database connection closed

@@ -1,4 +1,3 @@
-# backend/main.py
 import logging
 import subprocess
 import sys
@@ -12,15 +11,20 @@ from datetime import datetime
 
 from config import settings
 
-# Configure logging
+# Configure logging with UTF-8 encoding
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
         logging.StreamHandler(sys.stdout),
-        logging.FileHandler("doctalk.log") if not settings.debug else logging.NullHandler()
+        logging.FileHandler("doctalk.log", encoding='utf-8') if not settings.debug else logging.NullHandler()
     ]
 )
+
+# Set console output encoding to UTF-8
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
+
 logger = logging.getLogger(__name__)
 
 @asynccontextmanager
@@ -138,10 +142,10 @@ def safe_include_router(router_path: str, router_name: str, prefix: str = "/api"
         module = __import__(router_path, fromlist=[router_name])
         router = getattr(module, router_name)
         app.include_router(router, prefix=prefix)
-        logger.info(f"✅ {router_name} loaded successfully")
+        logger.info(f"✓ {router_name} loaded successfully")  # Using check mark that should work
         return True
     except Exception as e:
-        logger.error(f"❌ Failed to load {router_name}: {e}")
+        logger.error(f"✗ Failed to load {router_name}: {e}")  # Using X mark that should work
         return False
 
 # Load authentication router first
@@ -156,9 +160,9 @@ safe_include_router("api.doctors", "router", "/api")
 try:
     from api.voice import router as enhanced_voice_router
     app.include_router(enhanced_voice_router, prefix="/api")
-    logger.info("✅ Enhanced voice router loaded successfully")
+    logger.info("✓ Enhanced voice router loaded successfully")
 except Exception as e:
-    logger.error(f"❌ Failed to load enhanced voice router: {e}")
+    logger.error(f"✗ Failed to load enhanced voice router: {e}")
 
 @app.get("/")
 async def root():
@@ -311,6 +315,7 @@ async def create_sample_data():
             content={"error": f"Failed to create sample data: {str(e)}"}
         )
 
+# Rest of your existing endpoints...
 @app.post("/api/admin/create-demo-users")
 async def create_demo_users():
     """Create demo users for testing"""

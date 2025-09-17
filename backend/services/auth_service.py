@@ -1,5 +1,4 @@
 # backend/services/auth_service.py
-import jwt
 import bcrypt
 import uuid
 from datetime import datetime, timedelta
@@ -10,12 +9,33 @@ from database.mongodb import get_database
 from config import settings
 import logging
 
+# Fix JWT import - use PyJWT directly
+try:
+    import jwt
+except ImportError:
+    try:
+        from jose import jwt
+        # If using python-jose, we need to import differently
+        from jose.exceptions import JWTError as PyJWTError
+    except ImportError:
+        raise ImportError("Neither PyJWT nor python-jose is available. Please install one of them.")
+
+# Handle different JWT libraries
+try:
+    from jwt.exceptions import PyJWTError
+except ImportError:
+    try:
+        from jose.exceptions import JWTError as PyJWTError
+    except ImportError:
+        # Fallback for older versions
+        PyJWTError = Exception
+
 logger = logging.getLogger(__name__)
 
 class AuthService:
     def __init__(self):
         self.collection_name = "users"
-        self.secret_key = getattr(settings, 'jwt_secret_key', 'your-secret-key-here')
+        self.secret_key = getattr(settings, 'jwt_secret_key', 'your-secret-key-change-this-in-production')
         self.algorithm = "HS256"
         self.access_token_expire_minutes = 30
         self.refresh_token_expire_days = 30
@@ -38,15 +58,43 @@ class AuthService:
             expire = datetime.utcnow() + timedelta(minutes=15)
         
         to_encode.update({"exp": expire})
-        return jwt.encode(to_encode, self.secret_key, algorithm=self.algorithm)
+        
+        try:
+            # Try PyJWT first
+            return jwt.encode(to_encode, self.secret_key, algorithm=self.algorithm)
+        except Exception as e:
+            logger.error(f"JWT encoding error: {e}")
+            # If PyJWT fails, try python-jose
+            try:
+                from jose import jwt as jose_jwt
+                return jose_jwt.encode(to_encode, self.secret_key, algorithm=self.algorithm)
+            except Exception as jose_error:
+                logger.error(f"JOSE JWT encoding error: {jose_error}")
+                raise Exception(f"Failed to encode JWT token: {e}")
 
     def _decode_token(self, token: str) -> Optional[Dict[str, Any]]:
         """Decode JWT token"""
         try:
+            # Try PyJWT first
             payload = jwt.decode(token, self.secret_key, algorithms=[self.algorithm])
             return payload
-        except jwt.PyJWTError:
-            return None
+        except PyJWTError as e:
+            logger.error(f"JWT decoding error with PyJWT: {e}")
+        except Exception as e:
+            logger.error(f"General JWT decoding error: {e}")
+            
+        # If PyJWT fails, try python-jose
+        try:
+            from jose import jwt as jose_jwt
+            from jose.exceptions import JWTError
+            payload = jose_jwt.decode(token, self.secret_key, algorithms=[self.algorithm])
+            return payload
+        except JWTError as e:
+            logger.error(f"JWT decoding error with python-jose: {e}")
+        except Exception as e:
+            logger.error(f"General JOSE decoding error: {e}")
+            
+        return None
 
     async def register_user(self, user_data: UserCreate) -> UserResponse:
         """Register a new user"""
@@ -84,6 +132,8 @@ class AuthService:
             result = await db[self.collection_name].insert_one(user_dict)
             
             created_user = await db[self.collection_name].find_one({"_id": result.inserted_id})
+            
+            logger.info(f"User registered successfully: {user_data.email}")
             
             return UserResponse(
                 id=str(created_user["_id"]),
@@ -127,6 +177,7 @@ class AuthService:
             }
             
             await db["doctors"].insert_one(doctor_data)
+            logger.info(f"Doctor record created: {doctor_id}")
             return doctor_id
             
         except Exception as e:
@@ -155,6 +206,7 @@ class AuthService:
             }
             
             await db["patients"].insert_one(patient_data)
+            logger.info(f"Patient record created: {patient_id}")
             return patient_id
             
         except Exception as e:
@@ -168,9 +220,11 @@ class AuthService:
             
             user = await db[self.collection_name].find_one({"email": email})
             if not user:
+                logger.warning(f"User not found: {email}")
                 return None
             
             if not self._verify_password(password, user['password_hash']):
+                logger.warning(f"Invalid password for user: {email}")
                 return None
             
             if not user['is_active']:
@@ -181,6 +235,8 @@ class AuthService:
                 {"_id": user["_id"]},
                 {"$set": {"last_login": datetime.utcnow()}}
             )
+            
+            logger.info(f"User authenticated successfully: {email}")
             
             return UserResponse(
                 id=str(user["_id"]),
@@ -193,31 +249,37 @@ class AuthService:
 
     async def create_tokens(self, user: UserResponse) -> Dict[str, Any]:
         """Create access and refresh tokens"""
-        access_token_expires = timedelta(minutes=self.access_token_expire_minutes)
-        refresh_token_expires = timedelta(days=self.refresh_token_expire_days)
-        
-        access_token_data = {
-            "sub": user.email,
-            "user_id": user.user_id,
-            "role": user.role,
-            "type": "access"
-        }
-        
-        refresh_token_data = {
-            "sub": user.email,
-            "user_id": user.user_id,
-            "type": "refresh"
-        }
-        
-        access_token = self._generate_token(access_token_data, access_token_expires)
-        refresh_token = self._generate_token(refresh_token_data, refresh_token_expires)
-        
-        return {
-            "access_token": access_token,
-            "refresh_token": refresh_token,
-            "token_type": "bearer",
-            "expires_in": self.access_token_expire_minutes * 60
-        }
+        try:
+            access_token_expires = timedelta(minutes=self.access_token_expire_minutes)
+            refresh_token_expires = timedelta(days=self.refresh_token_expire_days)
+            
+            access_token_data = {
+                "sub": user.email,
+                "user_id": user.user_id,
+                "role": user.role,
+                "type": "access"
+            }
+            
+            refresh_token_data = {
+                "sub": user.email,
+                "user_id": user.user_id,
+                "type": "refresh"
+            }
+            
+            access_token = self._generate_token(access_token_data, access_token_expires)
+            refresh_token = self._generate_token(refresh_token_data, refresh_token_expires)
+            
+            logger.info(f"Tokens created for user: {user.email}")
+            
+            return {
+                "access_token": access_token,
+                "refresh_token": refresh_token,
+                "token_type": "bearer",
+                "expires_in": self.access_token_expire_minutes * 60
+            }
+        except Exception as e:
+            logger.error(f"Error creating tokens: {e}")
+            raise
 
     async def get_current_user(self, token: str) -> Optional[UserResponse]:
         """Get current user from token"""
