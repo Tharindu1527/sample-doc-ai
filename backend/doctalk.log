@@ -1665,3 +1665,22 @@ ImportError: email-validator is not installed, run `pip install pydantic[email]`
 2025-09-18 02:42:04,468 - main - INFO - Shutting down DocTalk AI backend...
 2025-09-18 02:42:04,541 - database.mongodb - INFO - Disconnected from MongoDB
 2025-09-18 02:42:04,542 - main - INFO - Database connection closed
+2025-09-18 02:46:17,802 - main - INFO - ✓ router loaded successfully
+2025-09-18 02:46:17,851 - main - INFO - ✓ router loaded successfully
+2025-09-18 02:46:17,862 - main - INFO - ✓ router loaded successfully
+2025-09-18 02:46:17,898 - main - INFO - ✓ router loaded successfully
+2025-09-18 02:46:19,263 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 02:46:19,266 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 02:46:22,528 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 02:46:23,099 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 02:46:23,099 - main - INFO - Database connection established
+2025-09-18 02:46:23,505 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 02:46:52,676 - services.auth_service - ERROR - JWT decoding error with PyJWT: Signature has expired
+2025-09-18 02:46:52,710 - services.auth_service - ERROR - JWT decoding error with python-jose: Signature has expired.
+2025-09-18 02:47:22,132 - services.auth_service - INFO - User authenticated successfully: dilum@gmail.com
+2025-09-18 02:47:22,132 - services.auth_service - INFO - Tokens created for user: dilum@gmail.com
+2025-09-18 02:47:22,132 - api.auth - INFO - User logged in: dilum@gmail.com
+2025-09-18 02:47:30,959 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 02:49:35,001 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 02:49:35,145 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 02:49:35,145 - main - INFO - Database connection closed

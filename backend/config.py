@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     elevenlabs_api_key: str = ""
     
     # Database
-    mongodb_url: str = "mongodb+srv://tharindubandara15270_db_user:QJc74nbUE84t7T9K@cluster0.p3m4ukl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    mongodb_url: str = ""
     database_name: str = "doctalk_ai"
     
     # JWT Settings
