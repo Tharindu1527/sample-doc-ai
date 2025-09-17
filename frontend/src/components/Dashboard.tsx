@@ -8,6 +8,7 @@ import {
   Database,
   XCircle
 } from 'lucide-react';
+import { makeAuthenticatedRequest } from '../stores/authStore';
 
 interface Statistics {
   patients: {
@@ -41,13 +42,15 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // FIXED: Use correct URLs without hardcoded localhost
+  // Use the authenticated request function
   const fetchData = async (url: string) => {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    try {
+      console.log(`Fetching data from: ${url}`);
+      return await makeAuthenticatedRequest(url);
+    } catch (err) {
+      console.error(`Error fetching ${url}:`, err);
+      throw err;
     }
-    return response.json();
   };
 
   useEffect(() => {
@@ -56,8 +59,10 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
     const loadData = async () => {
       try {
         console.log('Loading dashboard data...');
+        setLoading(true);
+        setError(null);
         
-        // FIXED: Use relative URLs that work with the proxy
+        // Use the authenticated request function
         const [patientsData, doctorsData, appointmentsData] = await Promise.all([
           fetchData('/api/patients/statistics'),
           fetchData('/api/doctors/statistics'),
@@ -77,7 +82,8 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
       } catch (err) {
         console.error('Dashboard load error:', err);
         if (isMounted) {
-          setError(err instanceof Error ? err.message : 'Failed to load data');
+          const errorMessage = err instanceof Error ? err.message : 'Failed to load dashboard data';
+          setError(errorMessage);
           setLoading(false);
         }
       }
@@ -100,22 +106,19 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
   const handleCreateSample = async () => {
     try {
       setLoading(true);
-      const response = await fetch('/api/admin/create-sample-data', {
+      const response = await makeAuthenticatedRequest('/api/admin/create-sample-data', {
         method: 'POST'
       });
       
-      if (response.ok) {
+      if (response) {
         console.log('Sample data created successfully');
         // Refresh the page to load new data
         window.location.reload();
-      } else {
-        const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
-        alert(`Failed to create sample data: ${errorData.error || response.statusText}`);
-        setLoading(false);
       }
     } catch (error) {
       console.error('Error creating sample data:', error);
-      alert('Error creating sample data');
+      const errorMessage = error instanceof Error ? error.message : 'Failed to create sample data';
+      alert(`Failed to create sample data: ${errorMessage}`);
       setLoading(false);
     }
   };

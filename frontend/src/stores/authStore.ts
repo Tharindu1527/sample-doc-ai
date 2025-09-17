@@ -26,23 +26,89 @@ interface AuthActions {
 
 type AuthStore = AuthState & AuthActions;
 
-// FIXED: Use proxy URL in development
+// Use proxy URL in development
 const API_BASE_URL = process.env.NODE_ENV === 'development' 
   ? '' // Use proxy in package.json
   : (process.env.REACT_APP_API_URL || 'http://localhost:8000');
 
-// Helper function to make authenticated requests
-const makeAuthenticatedRequest = async (url: string, options: RequestInit = {}, token?: string) => {
+// Enhanced helper function to make authenticated requests
+const makeAuthenticatedRequest = async (url: string, options: RequestInit = {}) => {
+  // Get the current token from the store
+  const state = useAuthStore.getState();
+  const token = state.accessToken;
+
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
     ...((options.headers as Record<string, string>) || {}),
   };
 
+  // Always include the Authorization header if we have a token
   if (token) {
     headers['Authorization'] = `Bearer ${token}`;
+    console.log('Adding Authorization header with token:', token.substring(0, 20) + '...');
+  } else {
+    console.warn('No access token available for request to:', url);
   }
 
-  console.log(`Making request to: ${API_BASE_URL}${url}`);
+  console.log(`Making authenticated request to: ${API_BASE_URL}${url}`);
+  console.log('Headers:', headers);
+  
+  const response = await fetch(`${API_BASE_URL}${url}`, {
+    ...options,
+    headers,
+  });
+
+  console.log(`Response status: ${response.status} ${response.statusText}`);
+
+  // Handle token expiration
+  if (response.status === 401) {
+    console.log('Token expired, attempting refresh...');
+    try {
+      await state.refreshTokens();
+      // Retry the request with new token
+      const newState = useAuthStore.getState();
+      const newToken = newState.accessToken;
+      
+      if (newToken) {
+        headers['Authorization'] = `Bearer ${newToken}`;
+        console.log('Retrying request with refreshed token');
+        
+        const retryResponse = await fetch(`${API_BASE_URL}${url}`, {
+          ...options,
+          headers,
+        });
+        
+        if (!retryResponse.ok) {
+          const errorData = await retryResponse.json().catch(() => ({ detail: 'An error occurred' }));
+          throw new Error(errorData.detail || `HTTP ${retryResponse.status}: ${retryResponse.statusText}`);
+        }
+        
+        return retryResponse.json();
+      }
+    } catch (refreshError) {
+      console.error('Token refresh failed:', refreshError);
+      // Force logout if refresh fails
+      state.logout();
+      throw new Error('Session expired. Please log in again.');
+    }
+  }
+
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({ detail: 'An error occurred' }));
+    throw new Error(errorData.detail || `HTTP ${response.status}: ${response.statusText}`);
+  }
+
+  return response.json();
+};
+
+// Create a version that doesn't require authentication for login/register
+const makePublicRequest = async (url: string, options: RequestInit = {}) => {
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+    ...((options.headers as Record<string, string>) || {}),
+  };
+
+  console.log(`Making public request to: ${API_BASE_URL}${url}`);
   
   const response = await fetch(`${API_BASE_URL}${url}`, {
     ...options,
@@ -75,10 +141,13 @@ export const useAuthStore = create<AuthStore>()(
         try {
           set({ isLoading: true, error: null });
 
-          const response = await makeAuthenticatedRequest('/api/auth/login', {
+          const response = await makePublicRequest('/api/auth/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
           });
+
+          console.log('Login successful, user:', response.user);
+          console.log('Access token received:', response.access_token ? 'Yes' : 'No');
 
           set({
             user: response.user,
@@ -109,7 +178,7 @@ export const useAuthStore = create<AuthStore>()(
 
           console.log('Registration data:', data);
 
-          const response = await makeAuthenticatedRequest('/api/auth/register', {
+          const response = await makePublicRequest('/api/auth/register', {
             method: 'POST',
             body: JSON.stringify(data),
           });
@@ -158,7 +227,7 @@ export const useAuthStore = create<AuthStore>()(
             throw new Error('No refresh token available');
           }
 
-          const response = await makeAuthenticatedRequest('/api/auth/refresh', {
+          const response = await makePublicRequest('/api/auth/refresh', {
             method: 'POST',
             body: JSON.stringify({ refresh_token: refreshToken }),
           });
@@ -177,15 +246,10 @@ export const useAuthStore = create<AuthStore>()(
 
       updateUser: async (data: Partial<User>) => {
         try {
-          const { accessToken } = get();
-          if (!accessToken) {
-            throw new Error('Not authenticated');
-          }
-
           const response = await makeAuthenticatedRequest('/api/auth/me', {
             method: 'PUT',
             body: JSON.stringify(data),
-          }, accessToken);
+          });
 
           set((state) => ({
             user: state.user ? { ...state.user, ...response } : null,
@@ -201,18 +265,13 @@ export const useAuthStore = create<AuthStore>()(
 
       changePassword: async (currentPassword: string, newPassword: string) => {
         try {
-          const { accessToken } = get();
-          if (!accessToken) {
-            throw new Error('Not authenticated');
-          }
-
           await makeAuthenticatedRequest('/api/auth/change-password', {
             method: 'POST',
             body: JSON.stringify({
               current_password: currentPassword,
               new_password: newPassword,
             }),
-          }, accessToken);
+          });
 
           set({ error: null });
         } catch (error) {
@@ -228,13 +287,15 @@ export const useAuthStore = create<AuthStore>()(
         try {
           const { accessToken } = get();
           if (!accessToken) {
-            console.log('No access token available');
+            console.log('No access token available for auth check');
             return;
           }
 
           const response = await makeAuthenticatedRequest('/api/auth/me', {
             method: 'GET',
-          }, accessToken);
+          });
+
+          console.log('Auth check successful, user:', response);
 
           set({
             user: response,
@@ -242,13 +303,13 @@ export const useAuthStore = create<AuthStore>()(
             error: null,
           });
         } catch (error) {
-          console.log('Auth check failed, attempting token refresh...');
-          // Try to refresh token
+          console.log('Auth check failed:', error);
+          // If auth check fails, try refresh token
           try {
             await get().refreshTokens();
             await get().checkAuth();
           } catch (refreshError) {
-            console.log('Token refresh failed, logging out');
+            console.log('Token refresh failed during auth check, logging out');
             get().logout();
           }
         }
@@ -269,6 +330,9 @@ export const useAuthStore = create<AuthStore>()(
     }
   )
 );
+
+// Export the makeAuthenticatedRequest function for use in other parts of the app
+export { makeAuthenticatedRequest };
 
 // Helper hooks
 export const useAuth = () => {

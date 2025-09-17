@@ -1684,3 +1684,13 @@ ImportError: email-validator is not installed, run `pip install pydantic[email]`
 2025-09-18 02:49:35,001 - main - INFO - Shutting down DocTalk AI backend...
 2025-09-18 02:49:35,145 - database.mongodb - INFO - Disconnected from MongoDB
 2025-09-18 02:49:35,145 - main - INFO - Database connection closed
+2025-09-18 02:49:36,758 - main - INFO - ✓ router loaded successfully
+2025-09-18 02:49:36,797 - main - INFO - ✓ router loaded successfully
+2025-09-18 02:49:36,811 - main - INFO - ✓ router loaded successfully
+2025-09-18 02:49:36,843 - main - INFO - ✓ router loaded successfully
+2025-09-18 02:49:37,619 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 02:49:37,622 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 02:49:40,268 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 02:49:40,829 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 02:49:40,829 - main - INFO - Database connection established
+2025-09-18 02:49:41,103 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
