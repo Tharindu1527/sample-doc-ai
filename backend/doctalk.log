@@ -1,0 +1,1267 @@
+2025-09-05 00:46:25,412 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 00:46:26,455 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 00:46:27,146 - database.mongodb - ERROR - Error creating indexes: An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }, full error: {'ok': 0.0, 'errmsg': 'An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }', 'code': 86, 'codeName': 'IndexKeySpecsConflict', '$clusterTime': {'clusterTime': Timestamp(1757013386, 34), 'signature': {'hash': b'\x96\x9c\xcb;._ n#^\x84\xcc \ns\xfa\x03<$>', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757013386, 34)}
+2025-09-05 00:46:27,154 - main - INFO - Database connection established
+2025-09-05 00:46:51,120 - services.appointment_service - ERROR - Error getting appointment: 'statistics' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2025-09-05 00:46:51,120 - api.appointments - ERROR - Error getting appointment: 'statistics' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2025-09-05 00:46:51,120 - services.appointment_service - ERROR - Error getting appointment: 'statistics' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2025-09-05 00:46:51,120 - api.appointments - ERROR - Error getting appointment: 'statistics' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2025-09-05 00:47:10,682 - services.appointment_service - ERROR - Error getting appointment: 'statistics' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2025-09-05 00:47:10,682 - api.appointments - ERROR - Error getting appointment: 'statistics' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2025-09-05 00:47:10,822 - services.appointment_service - ERROR - Error getting appointment: 'statistics' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2025-09-05 00:47:10,822 - api.appointments - ERROR - Error getting appointment: 'statistics' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2025-09-05 00:47:36,924 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 00:47:37,000 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 00:47:37,000 - main - INFO - Database connection closed
+2025-09-05 00:49:37,266 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 00:49:38,302 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 00:49:38,906 - database.mongodb - ERROR - Error creating indexes: An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }, full error: {'ok': 0.0, 'errmsg': 'An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }', 'code': 86, 'codeName': 'IndexKeySpecsConflict', '$clusterTime': {'clusterTime': Timestamp(1757013578, 13), 'signature': {'hash': b'T\x18\xeec\xfb\xce[z\xf3\xf2\x1c\x9bM[\xa9\x96\xa2aCh', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757013578, 13)}
+2025-09-05 00:49:38,906 - main - INFO - Database connection established
+2025-09-05 00:50:30,294 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 00:50:30,360 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 00:50:30,361 - main - INFO - Database connection closed
+2025-09-05 00:50:35,173 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 00:50:35,930 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 00:50:36,531 - database.mongodb - ERROR - Error creating indexes: An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }, full error: {'ok': 0.0, 'errmsg': 'An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }', 'code': 86, 'codeName': 'IndexKeySpecsConflict', '$clusterTime': {'clusterTime': Timestamp(1757013636, 3), 'signature': {'hash': b'$\xc3\xdc\xe4\xdbg*\xb0\x95\x11As\xf3\x81\xca\x88\xac\xa9\x14\x1e', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757013636, 3)}
+2025-09-05 00:50:36,538 - main - INFO - Database connection established
+2025-09-05 00:51:17,268 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 00:51:17,334 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 00:51:17,335 - main - INFO - Database connection closed
+2025-09-05 00:51:57,730 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 00:51:58,645 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 00:51:59,248 - database.mongodb - ERROR - Error creating indexes: An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }, full error: {'ok': 0.0, 'errmsg': 'An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }', 'code': 86, 'codeName': 'IndexKeySpecsConflict', '$clusterTime': {'clusterTime': Timestamp(1757013718, 47), 'signature': {'hash': b'\x9eX\xfb[\xb5\x05\x1dS\xcf\xda\x855\xb0\x9b\x1e\x94\x7fi^~', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757013718, 47)}
+2025-09-05 00:51:59,248 - main - INFO - Database connection established
+2025-09-05 01:00:01,461 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:00:01,527 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:00:01,528 - main - INFO - Database connection closed
+2025-09-05 01:00:17,322 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:00:18,384 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:00:19,084 - database.mongodb - ERROR - Error creating indexes: An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }, full error: {'ok': 0.0, 'errmsg': 'An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }', 'code': 86, 'codeName': 'IndexKeySpecsConflict', '$clusterTime': {'clusterTime': Timestamp(1757014218, 27), 'signature': {'hash': b'\xd8:<\xc7\x95wQZ\xad\xd7S\xe5\x82\xbf\xd7\xb3sU\xa1\xa2', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757014218, 27)}
+2025-09-05 01:00:19,085 - main - INFO - Database connection established
+2025-09-05 01:05:14,421 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:05:15,528 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:05:16,191 - database.mongodb - ERROR - Error creating indexes: An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }, full error: {'ok': 0.0, 'errmsg': 'An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }', 'code': 86, 'codeName': 'IndexKeySpecsConflict', '$clusterTime': {'clusterTime': Timestamp(1757014515, 24), 'signature': {'hash': b'b2F\xe5\xb5\x01bYfo\x12H\xe5\x13E>\xd0\x13\x13\xba', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757014515, 24)}
+2025-09-05 01:05:16,192 - main - INFO - Database connection established
+2025-09-05 01:06:03,502 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:06:03,557 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:06:03,557 - main - INFO - Database connection closed
+2025-09-05 01:06:48,033 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:06:49,147 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:06:49,719 - database.mongodb - ERROR - Error creating indexes: An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }, full error: {'ok': 0.0, 'errmsg': 'An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }', 'code': 86, 'codeName': 'IndexKeySpecsConflict', '$clusterTime': {'clusterTime': Timestamp(1757014609, 3), 'signature': {'hash': b'\xaeJ\x14\xb3\xed\xbd/\x8f\x13\xdf\xb8\xa6\xa7\xaa}2\xf5\xb8\xceN', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757014609, 3)}
+2025-09-05 01:06:49,719 - main - INFO - Database connection established
+2025-09-05 01:08:24,742 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:08:25,013 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:08:25,014 - main - INFO - Database connection closed
+2025-09-05 01:08:29,431 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:08:30,931 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:08:32,647 - database.mongodb - ERROR - Error creating indexes: An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }, full error: {'ok': 0.0, 'errmsg': 'An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }', 'code': 86, 'codeName': 'IndexKeySpecsConflict', '$clusterTime': {'clusterTime': Timestamp(1757014711, 36), 'signature': {'hash': b'\x8a\x1b/\xd2j\xe3\xdd\xbc\xc8\x05\xec~\xc7\n4\xaai\xee{\x13', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757014711, 36)}
+2025-09-05 01:08:32,650 - main - INFO - Database connection established
+2025-09-05 01:09:09,474 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:09:09,565 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:09:09,566 - main - INFO - Database connection closed
+2025-09-05 01:09:16,088 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:09:16,927 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:09:17,563 - database.mongodb - ERROR - Error creating indexes: An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }, full error: {'ok': 0.0, 'errmsg': 'An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }', 'code': 86, 'codeName': 'IndexKeySpecsConflict', '$clusterTime': {'clusterTime': Timestamp(1757014757, 5), 'signature': {'hash': b'\xb1K\xc3\x90\xc5\x93\x95\xc0\xd3\xa8\x92\xd6\xfa\xce\xc6p\xfe\xddx\xd4', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757014757, 5)}
+2025-09-05 01:09:17,564 - main - INFO - Database connection established
+2025-09-05 01:09:40,641 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:09:40,708 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:09:40,709 - main - INFO - Database connection closed
+2025-09-05 01:11:57,137 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:11:58,273 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:11:59,096 - database.mongodb - ERROR - Error creating indexes: An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }, full error: {'ok': 0.0, 'errmsg': 'An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }', 'code': 86, 'codeName': 'IndexKeySpecsConflict', '$clusterTime': {'clusterTime': Timestamp(1757014918, 24), 'signature': {'hash': b'0\xa3\xa86\xd2?\x1a\x00\xa9][\x1e\x95\n\xa9\x10\n\xd6\x9f;', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757014918, 24)}
+2025-09-05 01:11:59,096 - main - INFO - Database connection established
+2025-09-05 01:12:06,545 - services.appointment_service - ERROR - Error getting appointment: 'statistics' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2025-09-05 01:12:06,546 - api.appointments - ERROR - Error getting appointment: 'statistics' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2025-09-05 01:12:06,548 - services.appointment_service - ERROR - Error getting appointment: 'statistics' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2025-09-05 01:12:06,548 - api.appointments - ERROR - Error getting appointment: 'statistics' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2025-09-05 01:13:55,129 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:13:55,194 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:13:55,195 - main - INFO - Database connection closed
+2025-09-05 01:19:33,663 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:19:34,647 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:19:35,503 - database.mongodb - ERROR - Error creating indexes: An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }, full error: {'ok': 0.0, 'errmsg': 'An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }', 'code': 86, 'codeName': 'IndexKeySpecsConflict', '$clusterTime': {'clusterTime': Timestamp(1757015374, 36), 'signature': {'hash': b'\xc1E\x02bW\x86\x11\xba\x17\x0c\xc1\xf5s\x81d\xf3\xf8\xaa\x9c\xca', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757015374, 36)}
+2025-09-05 01:19:35,504 - main - INFO - Database connection established
+2025-09-05 01:19:47,804 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:19:47,882 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:19:47,882 - main - INFO - Database connection closed
+2025-09-05 01:19:50,659 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:19:51,502 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:19:52,083 - database.mongodb - ERROR - Error creating indexes: An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }, full error: {'ok': 0.0, 'errmsg': 'An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, key: { phone: 1 }, name: "phone_1" }, existing index: { v: 2, unique: true, key: { phone: 1 }, name: "phone_1", sparse: true }', 'code': 86, 'codeName': 'IndexKeySpecsConflict', '$clusterTime': {'clusterTime': Timestamp(1757015391, 25), 'signature': {'hash': b'6|\xa3\xb5\x14\xa0$}\x98m\x08yf\x865=\xda\xf1\x95\xef', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757015391, 25)}
+2025-09-05 01:19:52,084 - main - INFO - Database connection established
+2025-09-05 01:20:02,507 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:20:02,580 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:20:02,580 - main - INFO - Database connection closed
+2025-09-05 01:20:05,355 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:20:06,141 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:20:06,549 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: 29c45346-1d64-4fa3-a65a-4e80061b213f: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: 29c45346-1d64-4fa3-a65a-4e80061b213f: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757015406, 6), 'signature': {'hash': b'\x8e\xb1\xf0\xe5Q\x1eXq\x86/_\x038\xd7\xd6q\xcdR:<', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757015406, 6)}
+2025-09-05 01:20:06,549 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 01:20:06,550 - main - INFO - Database connection established
+2025-09-05 01:29:20,489 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:29:20,572 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:29:20,573 - main - INFO - Database connection closed
+2025-09-05 01:29:28,312 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:29:29,269 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:29:29,640 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: 8d3a7b6c-506a-4e12-86ce-06dce6dcfd0e: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: 8d3a7b6c-506a-4e12-86ce-06dce6dcfd0e: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757015969, 12), 'signature': {'hash': b'K\xf1H\xf2\x8f\xcfg\xc8\xbe/\xdfZ\xa0i\xfb\x9d\x028A\x91', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757015969, 12)}
+2025-09-05 01:29:29,641 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 01:29:29,641 - main - INFO - Database connection established
+2025-09-05 01:29:43,690 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:29:43,768 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:29:43,768 - main - INFO - Database connection closed
+2025-09-05 01:30:14,520 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:30:15,491 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:30:15,889 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: dfa2c2a5-7700-4965-ae23-83bdf338c2fd: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: dfa2c2a5-7700-4965-ae23-83bdf338c2fd: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757016015, 13), 'signature': {'hash': b'\xa7k\xd4\xb5\x8e\xd0\x1e\xdd\x10\xeb\x91H\x9em8\xa5\xaam\xa4t', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757016015, 13)}
+2025-09-05 01:30:15,892 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 01:30:15,893 - main - INFO - Database connection established
+2025-09-05 01:34:33,085 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:34:33,157 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:34:33,157 - main - INFO - Database connection closed
+2025-09-05 01:34:37,375 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:34:38,274 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:34:38,668 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: b9f780e8-e874-4cfc-a821-e6b6baf2edcf: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: b9f780e8-e874-4cfc-a821-e6b6baf2edcf: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757016278, 9), 'signature': {'hash': b"H\xc1\x8bz\xb6\xda\t'\x1d\xe7Rc\x8f\xe5\xbc#\xbf\xb7x*", 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757016278, 9)}
+2025-09-05 01:34:38,671 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 01:34:38,671 - main - INFO - Database connection established
+2025-09-05 01:34:56,706 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:34:56,772 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:34:56,772 - main - INFO - Database connection closed
+2025-09-05 01:35:00,342 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:35:01,135 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:35:01,546 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: b66a2e6f-0e08-4897-829d-71b7413ca16a: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: b66a2e6f-0e08-4897-829d-71b7413ca16a: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757016300, 55), 'signature': {'hash': b'\xb4\xb2\x85\xab\xd7$R%a\xd9\xc8\xc3K\xde\xeb\xaf:I\xa4\xc0', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757016300, 55)}
+2025-09-05 01:35:01,547 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 01:35:01,547 - main - INFO - Database connection established
+2025-09-05 01:35:04,846 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:35:04,913 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:35:04,914 - main - INFO - Database connection closed
+2025-09-05 01:35:52,285 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:35:53,253 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:35:53,654 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: 7147363c-7950-4927-b43e-d574c0a1b1a6: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: 7147363c-7950-4927-b43e-d574c0a1b1a6: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757016353, 7), 'signature': {'hash': b'G\x7f\xf7\xbe\xd8?\xe6\xde\x93u\x83H\r\xca\x1b#\xef\x88J3', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757016353, 7)}
+2025-09-05 01:35:53,654 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 01:35:53,655 - main - INFO - Database connection established
+2025-09-05 01:35:56,971 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:35:57,034 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:35:57,034 - main - INFO - Database connection closed
+2025-09-05 01:46:30,806 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:46:31,862 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:46:32,239 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: 5dbe9aed-fb6f-45b5-88a7-22e5d92d9250: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: 5dbe9aed-fb6f-45b5-88a7-22e5d92d9250: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757016991, 30), 'signature': {'hash': b'\xf6\xfc\xe5\x023({\x1a\xe9\xccQ\xd3\x04\xf2>\xdf\xb0\x8fJ\xfb', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757016991, 30)}
+2025-09-05 01:46:32,242 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 01:46:32,244 - main - INFO - Database connection established
+2025-09-05 01:48:10,626 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:48:10,693 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:48:10,694 - main - INFO - Database connection closed
+2025-09-05 01:53:48,404 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:53:49,411 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:53:49,798 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: b8b51730-fb59-48db-943b-07876d989cb4: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: b8b51730-fb59-48db-943b-07876d989cb4: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757017429, 12), 'signature': {'hash': b'\xbf\xe5]\xe5\xb4f!>\xcfN\xe1e\xc1@\xcb\x1a\x1f\x90\x89\x9c', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757017429, 12)}
+2025-09-05 01:53:49,801 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 01:53:49,802 - main - INFO - Database connection established
+2025-09-05 01:54:19,328 - services.voice_service - INFO - Transcription confidence: 0.998618
+2025-09-05 01:54:19,329 - services.voice_service - INFO - Transcribed: I need to schedule an appointment.
+2025-09-05 01:54:20,295 - services.voice_service - ERROR - Gemini response error: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-09-05 01:54:20,297 - services.voice_service - ERROR - Voice processing error: AI response generation failed: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-09-05 01:55:13,696 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 01:56:28,560 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 01:56:28,624 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 01:56:28,624 - main - INFO - Database connection closed
+2025-09-05 01:56:34,057 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 01:56:34,954 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 01:56:35,312 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: 92a4d828-32e7-44b4-8e61-b72da1ed0307: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: 92a4d828-32e7-44b4-8e61-b72da1ed0307: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757017594, 33), 'signature': {'hash': b'\x04\xaf\xf2\xd5\xab[\xe2&1\xd0\x86\x16`\x98\xebh5\xb2\x97S', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757017594, 33)}
+2025-09-05 01:56:35,313 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 01:56:35,313 - main - INFO - Database connection established
+2025-09-05 01:57:28,921 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 01:57:48,113 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 01:58:22,162 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 01:58:32,049 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 02:05:46,359 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 02:09:10,717 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 02:09:10,828 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 02:09:10,886 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 02:09:10,887 - main - INFO - Database connection closed
+2025-09-05 02:09:13,623 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 02:09:14,425 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 02:09:14,799 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: aeef06ba-40c9-4dd5-a907-c7daa40112ee: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: aeef06ba-40c9-4dd5-a907-c7daa40112ee: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757018354, 13), 'signature': {'hash': b'\xc6k\x8e~\xd7\xc0\x89\x172\xd5\x98D\xcd\xbew\x16\xa0%\xb3\xe9', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757018354, 13)}
+2025-09-05 02:09:14,800 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 02:09:14,800 - main - INFO - Database connection established
+2025-09-05 02:09:25,929 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 02:09:26,006 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 02:09:26,007 - main - INFO - Database connection closed
+2025-09-05 02:09:28,450 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 02:09:29,326 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 02:09:29,719 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: a926cbe1-fdc4-4775-a122-54aa38055b9e: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: a926cbe1-fdc4-4775-a122-54aa38055b9e: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757018369, 15), 'signature': {'hash': b'ek\x8cx<\xd8\x8e\xb1\xbf\x05\xaa\xbc\xd8\xfa\x980\x84l\xc5\x18', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757018369, 15)}
+2025-09-05 02:09:29,720 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 02:09:29,720 - main - INFO - Database connection established
+2025-09-05 02:11:04,736 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 02:11:04,815 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 02:11:04,815 - main - INFO - Database connection closed
+2025-09-05 02:11:07,131 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 02:11:07,968 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 02:11:08,332 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: 8729e428-fa81-4f23-8740-55d80a360637: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: 8729e428-fa81-4f23-8740-55d80a360637: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757018467, 38), 'signature': {'hash': b'\x00!\xf3\xf6H\xf5Z\xa1\x83S\x8c\xb5\xbc\x83{[\xda\xe2@\x0e', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757018467, 38)}
+2025-09-05 02:11:08,335 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 02:11:08,336 - main - INFO - Database connection established
+2025-09-05 02:11:51,228 - services.voice_service - INFO - Transcription confidence: 0.99836594
+2025-09-05 02:11:51,229 - services.voice_service - INFO - Transcribed: I want to cancel my appointment.
+2025-09-05 02:11:51,872 - services.voice_service - ERROR - Gemini response error: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-09-05 02:11:51,873 - services.voice_service - ERROR - Voice processing error: AI response generation failed: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-09-05 02:13:05,606 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 02:13:05,714 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 02:13:05,791 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 02:13:05,792 - main - INFO - Database connection closed
+2025-09-05 02:13:23,737 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 02:13:24,710 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 02:13:25,104 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: 56a1402b-3baf-4c7f-9e59-799d2b98299b: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: 56a1402b-3baf-4c7f-9e59-799d2b98299b: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757018604, 32), 'signature': {'hash': b'9\xa1\x04\xb7\xca[[\xeb:"\x10J\x82\xb3O\x9e\xc1{\xe4x', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757018604, 31)}
+2025-09-05 02:13:25,105 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 02:13:25,106 - main - INFO - Database connection established
+2025-09-05 02:14:46,171 - services.voice_service - INFO - Transcription confidence: 0.998862
+2025-09-05 02:14:46,172 - services.voice_service - INFO - Transcribed: I want to create an appointment.
+2025-09-05 02:15:31,401 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 02:15:39,892 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 02:16:31,237 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 02:22:27,139 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 02:22:27,217 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 02:22:27,217 - main - INFO - Database connection closed
+2025-09-05 02:22:31,627 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 02:22:32,520 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 02:22:32,914 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: 6b6d7528-826e-46f8-a712-4ec1c481c4c1: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: 6b6d7528-826e-46f8-a712-4ec1c481c4c1: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757019152, 22), 'signature': {'hash': b'V\x95y\xc2\xbb\x8b\x86\xa7\x19"rDm:\x95F\xb0\xa9\xde\x81', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757019152, 22)}
+2025-09-05 02:22:32,916 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 02:22:32,916 - main - INFO - Database connection established
+2025-09-05 02:23:42,247 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 02:23:42,319 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 02:23:42,320 - main - INFO - Database connection closed
+2025-09-05 02:23:45,280 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 02:23:46,181 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 02:23:46,572 - database.mongodb - WARNING - Could not create doctors indexes: Index build failed: 71850baa-c0cb-4330-869c-6de29084a107: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: 71850baa-c0cb-4330-869c-6de29084a107: Collection doctalk_ai.doctors ( 7a303956-e6bd-438e-b2d2-841425f360ff ) :: caused by :: E11000 duplicate key error collection: doctalk_ai.doctors index: idx_doctor_id_unique dup key: { doctor_id: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'doctor_id': 1}, 'keyValue': {'doctor_id': None}, '$clusterTime': {'clusterTime': Timestamp(1757019225, 44), 'signature': {'hash': b'\x8c\x94Ob\xe5\x8c\x8b2\x92\xfd\x19!\x85\xbco\x0e\x0f\xe4\xab\x90', 'keyId': 7485996588108611635}}, 'operationTime': Timestamp(1757019225, 44)}
+2025-09-05 02:23:46,573 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 02:23:46,574 - main - INFO - Database connection established
+2025-09-05 02:24:17,974 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 02:24:18,042 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 02:24:18,043 - main - INFO - Database connection closed
+2025-09-05 02:25:38,021 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 02:25:38,939 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 02:25:39,407 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 02:25:39,408 - main - INFO - Database connection established
+2025-09-05 02:26:30,923 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 02:26:43,568 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 02:27:03,341 - services.voice_service - INFO - Transcription confidence: 0.99907506
+2025-09-05 02:27:03,342 - services.voice_service - INFO - Transcribed: I need to schedule an appointment.
+2025-09-05 02:28:06,820 - services.voice_service - INFO - Transcription confidence: 0.98226905
+2025-09-05 02:28:06,820 - services.voice_service - INFO - Transcribed: My name is Tarun Nushika.
+2025-09-05 02:28:58,849 - services.voice_service - INFO - Transcription confidence: 0.75788456
+2025-09-05 02:28:58,850 - services.voice_service - INFO - Transcribed: I have an headache.
+2025-09-05 02:29:36,780 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 02:30:03,544 - services.voice_service - INFO - Transcription confidence: 0.93978065
+2025-09-05 02:30:03,545 - services.voice_service - INFO - Transcribed: I want to face to doctor Smith and ninety 9AM is, good.
+2025-09-05 02:30:07,191 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 438 credits remaining, while 483 credits are required for this request.
+2025-09-05 02:30:33,223 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 02:31:07,281 - services.voice_service - INFO - Transcription confidence: 0.99912775
+2025-09-05 02:31:07,282 - services.voice_service - INFO - Transcribed: Yes. Please confirm this appointment.
+2025-09-05 02:32:06,014 - services.voice_service - INFO - Transcription confidence: 0.94439065
+2025-09-05 02:32:06,015 - services.voice_service - INFO - Transcribed: Yes. All informations are correct.
+2025-09-05 02:32:09,791 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 501 credits are required for this request.
+2025-09-05 02:32:25,228 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 02:32:39,539 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 02:33:03,961 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 03:53:07,963 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 03:53:08,073 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 03:53:08,139 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 03:53:08,139 - main - INFO - Database connection closed
+2025-09-05 06:50:00,677 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 06:50:01,938 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 06:50:02,384 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 06:50:02,384 - main - INFO - Database connection established
+2025-09-05 06:51:56,566 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 06:51:56,674 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 06:51:56,747 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 06:51:56,747 - main - INFO - Database connection closed
+2025-09-05 06:51:58,954 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 06:51:59,883 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 06:52:00,339 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 06:52:00,339 - main - INFO - Database connection established
+2025-09-05 06:52:54,064 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 06:52:54,163 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 06:52:54,163 - main - INFO - Database connection closed
+2025-09-05 06:52:56,648 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 06:52:57,822 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 06:52:58,324 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 06:52:58,325 - main - INFO - Database connection established
+2025-09-05 06:54:08,059 - services.voice_service - INFO - Transcription confidence: 0.99859434
+2025-09-05 06:54:08,059 - services.voice_service - INFO - Transcribed: I need to schedule an appointment.
+2025-09-05 06:54:12,952 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 487 credits are required for this request.
+2025-09-05 06:54:43,981 - services.voice_service - INFO - Transcription confidence: 0.9867912
+2025-09-05 06:54:43,983 - services.voice_service - INFO - Transcribed: My name is Tarun Anushka, and I I have an headache.
+2025-09-05 06:54:47,085 - services.appointment_service - INFO - Handling voice appointment: intent=book_appointment, entities={'patient_name': 'Tarun Anushka', 'date': '2024-09-05', 'time': None, 'doctor': None, 'reason': 'headache', 'phone': None, 'confirmation': 'no'}
+2025-09-05 06:54:47,665 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 131 credits are required for this request.
+2025-09-05 06:55:27,496 - services.voice_service - INFO - Transcription confidence: 0.9644681
+2025-09-05 06:55:27,496 - services.voice_service - INFO - Transcribed: Doctor Smith and, 98.
+2025-09-05 06:55:31,574 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 445 credits are required for this request.
+2025-09-05 06:56:12,971 - services.voice_service - INFO - Transcription confidence: 0.98650175
+2025-09-05 06:56:12,973 - services.voice_service - INFO - Transcribed: Fine. Doctor Smith. +1 030
+2025-09-05 06:56:16,040 - services.appointment_service - INFO - Handling voice appointment: intent=book_appointment, entities={'patient_name': 'Tarun Anushka', 'date': '2024-09-05', 'time': None, 'doctor': 'Dr. John Smith', 'reason': None, 'phone': None, 'confirmation': 'no'}
+2025-09-05 06:56:16,651 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 113 credits are required for this request.
+2025-09-05 06:56:29,671 - services.voice_service - INFO - Transcription confidence: 0.99397016
+2025-09-05 06:56:29,673 - services.voice_service - INFO - Transcribed: 10:30AM.
+2025-09-05 06:56:32,694 - services.appointment_service - INFO - Handling voice appointment: intent=confirm_appointment, entities={'patient_name': 'Tarun Anushka', 'date': '2024-09-05', 'time': '10:30', 'doctor': 'Dr. John Smith', 'reason': 'headache', 'phone': None, 'confirmation': 'no'}
+2025-09-05 06:56:32,783 - services.appointment_service - INFO - Creating new patient: Tarun Anushka
+2025-09-05 06:56:32,898 - services.appointment_service - INFO - Created new patient with ID: P20250905A1FA7929
+2025-09-05 06:56:33,082 - services.appointment_service - INFO - Created appointment: 68ba3c487de7674981629171
+2025-09-05 06:56:33,781 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 130 credits are required for this request.
+2025-09-05 06:56:33,787 - api.voice - ERROR - WebSocket error: Object of type datetime is not JSON serializable
+2025-09-05 06:58:14,355 - services.voice_service - INFO - Transcription confidence: 0.93456376
+2025-09-05 06:58:14,356 - services.voice_service - INFO - Transcribed: Doctor Smith Smith, 10:30.
+2025-09-05 06:58:17,571 - services.appointment_service - INFO - Handling voice appointment: intent=book_appointment, entities={'patient_name': 'Tarun Anushka', 'date': '2024-09-05', 'time': '10:30', 'doctor': 'Dr. John Smith', 'reason': 'headache', 'phone': None, 'confirmation': 'no'}
+2025-09-05 06:58:18,264 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 124 credits are required for this request.
+2025-09-05 06:58:32,528 - services.voice_service - INFO - Transcription confidence: 0.8802115
+2025-09-05 06:58:32,528 - services.voice_service - INFO - Transcribed: Yes. Of course, we book that appointment.
+2025-09-05 06:58:35,382 - services.appointment_service - INFO - Handling voice appointment: intent=confirm_appointment, entities={'patient_name': 'Tarun Anushka', 'date': '2024-09-05', 'time': '10:30', 'doctor': 'Dr. John Smith', 'reason': 'headache', 'phone': None, 'confirmation': 'yes'}
+2025-09-05 06:58:35,471 - services.appointment_service - INFO - Found existing patient: P20250905A1FA7929
+2025-09-05 06:58:35,569 - services.appointment_service - WARNING - Time slot already booked: 2024-09-05 10:30:00
+2025-09-05 06:58:36,218 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 82 credits are required for this request.
+2025-09-05 06:59:03,904 - services.voice_service - INFO - Transcription confidence: 0.89083457
+2025-09-05 06:59:03,905 - services.voice_service - INFO - Transcribed: 128.
+2025-09-05 06:59:08,084 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 532 credits are required for this request.
+2025-09-05 06:59:25,855 - services.voice_service - INFO - Transcription confidence: 0.9904915
+2025-09-05 06:59:25,855 - services.voice_service - INFO - Transcribed: Today, 11AM.
+2025-09-05 06:59:28,895 - services.appointment_service - INFO - Handling voice appointment: intent=book_appointment, entities={'patient_name': None, 'date': '2024-10-27', 'time': '11:00', 'doctor': None, 'reason': None, 'phone': None, 'confirmation': 'no'}
+2025-09-05 06:59:29,624 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 131 credits are required for this request.
+2025-09-05 06:59:44,413 - services.voice_service - INFO - Transcription confidence: 0.9983631
+2025-09-05 06:59:44,414 - services.voice_service - INFO - Transcribed: My name is Sarin Darska, and I want to find out doctor Smith.
+2025-09-05 06:59:48,232 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 386 credits are required for this request.
+2025-09-05 07:00:06,221 - services.voice_service - INFO - Transcription confidence: 0.99391466
+2025-09-05 07:00:06,221 - services.voice_service - INFO - Transcribed: Yeah. Whatever time, you can appoint that.
+2025-09-05 07:00:09,369 - services.appointment_service - INFO - Handling voice appointment: intent=book_appointment, entities={'patient_name': 'Sarin Darska', 'date': None, 'time': None, 'doctor': None, 'reason': None, 'phone': None, 'confirmation': 'no'}
+2025-09-05 07:00:09,936 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 147 credits are required for this request.
+2025-09-05 07:00:22,855 - services.voice_service - INFO - Transcription confidence: 0.9379128
+2025-09-05 07:00:22,856 - services.voice_service - INFO - Transcribed: Doctor Smith and ten o 11AM.
+2025-09-05 07:00:27,899 - services.appointment_service - INFO - Handling voice appointment: intent=book_appointment, entities={'patient_name': 'Sarin Darska', 'date': None, 'time': '10:00', 'doctor': 'Dr. John Smith', 'reason': None, 'phone': None, 'confirmation': 'no'}
+2025-09-05 07:00:28,464 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 113 credits are required for this request.
+2025-09-05 07:01:44,195 - services.voice_service - INFO - Transcription confidence: 0.77441084
+2025-09-05 07:01:44,195 - services.voice_service - INFO - Transcribed: Today, learn
+2025-09-05 07:01:48,267 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 552 credits are required for this request.
+2025-09-05 07:02:00,607 - services.voice_service - INFO - Transcription confidence: 0.9929432
+2025-09-05 07:02:00,607 - services.voice_service - INFO - Transcribed: 11AM.
+2025-09-05 07:02:04,532 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 409 credits are required for this request.
+2025-09-05 07:02:20,452 - services.voice_service - INFO - Transcription confidence: 0.8118398
+2025-09-05 07:02:20,453 - services.voice_service - INFO - Transcribed: Anytime I can attend.
+2025-09-05 07:02:24,071 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 463 credits are required for this request.
+2025-09-05 07:02:41,667 - services.voice_service - INFO - Transcription confidence: 0.866784
+2025-09-05 07:02:41,668 - services.voice_service - INFO - Transcribed: I have an headache.
+2025-09-05 07:02:45,407 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 431 credits are required for this request.
+2025-09-05 07:02:53,101 - services.voice_service - INFO - Transcription confidence: 0.9579462
+2025-09-05 07:02:53,101 - services.voice_service - INFO - Transcribed: Please confirm this appointment.
+2025-09-05 07:02:56,383 - services.appointment_service - INFO - Handling voice appointment: intent=confirm_appointment, entities={'patient_name': 'Sarin Darska', 'date': '2025-09-05', 'time': '09:00', 'doctor': 'Dr. John Smith', 'reason': 'headache', 'phone': None, 'confirmation': None}
+2025-09-05 07:02:56,466 - services.appointment_service - INFO - Creating new patient: Sarin Darska
+2025-09-05 07:02:56,554 - services.appointment_service - ERROR - Error creating/finding patient: E11000 duplicate key error collection: doctalk_ai.patients index: phone_1 dup key: { phone: null }, full error: {'index': 0, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: doctalk_ai.patients index: phone_1 dup key: { phone: null }', 'keyPattern': {'phone': 1}, 'keyValue': {'phone': None}}
+2025-09-05 07:02:57,120 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 92 credits are required for this request.
+2025-09-05 07:03:24,468 - services.voice_service - INFO - Transcription confidence: 0.9969368
+2025-09-05 07:03:24,468 - services.voice_service - INFO - Transcribed: My name is Tarud Danushka.
+2025-09-05 07:03:28,203 - services.appointment_service - INFO - Handling voice appointment: intent=book_appointment, entities={'patient_name': 'Tarud Danushka', 'date': None, 'time': None, 'doctor': None, 'reason': 'headache', 'phone': None, 'confirmation': 'no'}
+2025-09-05 07:03:28,789 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 147 credits are required for this request.
+2025-09-05 07:04:30,308 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:04:54,516 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:05:10,962 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:05:34,694 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:07:15,610 - services.voice_service - INFO - Transcription confidence: 0.9950653
+2025-09-05 07:07:15,611 - services.voice_service - INFO - Transcribed: My name is Tarindo Danushka.
+2025-09-05 07:07:16,027 - services.voice_service - ERROR - Gemini response error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 44
+}
+]
+2025-09-05 07:07:16,028 - services.voice_service - ERROR - Voice processing error: AI response generation failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 44
+}
+]
+2025-09-05 07:07:16,759 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 112 credits are required for this request.
+2025-09-05 07:07:40,533 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:07:48,205 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:08:00,183 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:08:18,825 - services.voice_service - INFO - Transcription confidence: 0.99623424
+2025-09-05 07:08:18,826 - services.voice_service - INFO - Transcribed: Please cancel appointment.
+2025-09-05 07:08:19,252 - services.voice_service - ERROR - Gemini response error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 41
+}
+]
+2025-09-05 07:08:19,253 - services.voice_service - ERROR - Voice processing error: AI response generation failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 41
+}
+]
+2025-09-05 07:08:19,906 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 112 credits are required for this request.
+2025-09-05 07:08:29,092 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:08:33,356 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:08:36,967 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:09:02,482 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:40:12,400 - services.voice_service - INFO - Transcription confidence: 0.9891684
+2025-09-05 07:40:12,401 - services.voice_service - INFO - Transcribed: I need
+2025-09-05 07:40:14,711 - services.voice_service - ERROR - Intent extraction error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 46
+}
+]
+2025-09-05 07:40:15,489 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 17 credits remaining, while 571 credits are required for this request.
+2025-09-05 07:46:44,950 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:46:45,058 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 07:46:45,155 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 07:46:45,155 - main - INFO - Database connection closed
+2025-09-05 07:46:54,427 - main - INFO - Starting up DocTalk AI backend...
+2025-09-05 07:46:55,360 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-05 07:46:55,790 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-05 07:46:55,790 - main - INFO - Database connection established
+2025-09-05 07:47:12,102 - services.voice_service - INFO - Transcription confidence: 0.9935215
+2025-09-05 07:47:12,103 - services.voice_service - INFO - Transcribed: I need to schedule an appoint.
+2025-09-05 07:47:14,553 - services.voice_service - ERROR - Intent extraction error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 46
+}
+]
+2025-09-05 07:47:49,834 - services.voice_service - INFO - Transcription confidence: 0.99047345
+2025-09-05 07:47:49,834 - services.voice_service - INFO - Transcribed: My name is Taran Darska, and I have an headache.
+2025-09-05 07:47:52,030 - services.voice_service - ERROR - Intent extraction error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 8
+}
+]
+2025-09-05 07:49:04,436 - services.voice_service - INFO - Transcription confidence: 0.91658986
+2025-09-05 07:49:04,437 - services.voice_service - INFO - Transcribed: Doctor Wilson at 9AM.
+2025-09-05 07:49:04,894 - services.voice_service - ERROR - Gemini response error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 56
+}
+]
+2025-09-05 07:49:04,895 - services.voice_service - ERROR - Voice processing error: AI response generation failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 56
+}
+]
+2025-09-05 07:49:35,945 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:49:50,479 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:52:56,306 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:53:01,983 - api.patients - ERROR - Error getting patients: ac-bpmglpl-shard-00-02.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms),ac-bpmglpl-shard-00-01.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms),ac-bpmglpl-shard-00-00.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 68ba48161957993b77bf821a, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-bpmglpl-shard-00-00.p3m4ukl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('ac-bpmglpl-shard-00-00.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms)')>, <ServerDescription ('ac-bpmglpl-shard-00-01.p3m4ukl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('ac-bpmglpl-shard-00-01.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms)')>, <ServerDescription ('ac-bpmglpl-shard-00-02.p3m4ukl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('ac-bpmglpl-shard-00-02.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms)')>]>
+2025-09-05 07:53:01,984 - api.patients - ERROR - Error getting patients: ac-bpmglpl-shard-00-02.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms),ac-bpmglpl-shard-00-01.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms),ac-bpmglpl-shard-00-00.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 68ba48161957993b77bf821a, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-bpmglpl-shard-00-00.p3m4ukl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('ac-bpmglpl-shard-00-00.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms)')>, <ServerDescription ('ac-bpmglpl-shard-00-01.p3m4ukl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('ac-bpmglpl-shard-00-01.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms)')>, <ServerDescription ('ac-bpmglpl-shard-00-02.p3m4ukl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('ac-bpmglpl-shard-00-02.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms)')>]>
+2025-09-05 07:53:34,383 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 07:53:45,139 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 08:00:04,131 - api.appointments - ERROR - Error getting all appointments: ac-bpmglpl-shard-00-01.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 10000.0ms)
+2025-09-05 08:00:11,783 - api.appointments - ERROR - Error getting all appointments: ac-bpmglpl-shard-00-02.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 10000.0ms),ac-bpmglpl-shard-00-01.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms),ac-bpmglpl-shard-00-00.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 68ba48161957993b77bf821a, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-bpmglpl-shard-00-00.p3m4ukl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('ac-bpmglpl-shard-00-00.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms)')>, <ServerDescription ('ac-bpmglpl-shard-00-01.p3m4ukl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('ac-bpmglpl-shard-00-01.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 10000.0ms, connectTimeoutMS: 10000.0ms)')>, <ServerDescription ('ac-bpmglpl-shard-00-02.p3m4ukl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('ac-bpmglpl-shard-00-02.p3m4ukl.mongodb.net:27017: timed out (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 10000.0ms)')>]>
+2025-09-05 15:58:56,019 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 15:58:59,004 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 16:11:55,332 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 16:12:24,622 - api.voice - INFO - WebSocket client disconnected
+2025-09-05 19:45:35,433 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-05 19:45:35,507 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-05 19:45:35,508 - main - INFO - Database connection closed
+2025-09-06 00:32:09,254 - main - INFO - Starting up DocTalk AI backend...
+2025-09-06 00:32:10,731 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-06 00:32:11,337 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-06 00:32:11,337 - main - INFO - Database connection established
+2025-09-06 00:32:56,789 - api.voice - INFO - WebSocket client disconnected
+2025-09-06 00:33:04,885 - api.voice - INFO - WebSocket client disconnected
+2025-09-06 00:33:16,337 - api.voice - INFO - WebSocket client disconnected
+2025-09-06 00:33:23,726 - api.voice - INFO - WebSocket client disconnected
+2025-09-06 00:37:23,053 - api.voice - INFO - WebSocket client disconnected
+2025-09-06 00:49:21,665 - services.voice_service - INFO - Transcription confidence: 0.99774617
+2025-09-06 00:49:21,665 - services.voice_service - INFO - Transcribed: I need to schedule an appointment.
+2025-09-06 00:49:43,272 - services.appointment_service - INFO - Handling voice appointment: intent=book_appointment, entities={'patient_name': None, 'date': None, 'time': None, 'doctor': None, 'reason': None, 'phone': None, 'confirmation': 'no'}
+2025-09-06 00:50:41,979 - api.voice - INFO - WebSocket client disconnected
+2025-09-06 00:51:00,308 - services.voice_service - INFO - Transcription confidence: 0.99929535
+2025-09-06 00:51:00,309 - services.voice_service - INFO - Transcribed: I need to schedule an appointment.
+2025-09-06 01:41:48,072 - api.voice - INFO - WebSocket client disconnected
+2025-09-06 01:42:37,673 - api.voice - INFO - WebSocket client disconnected
+2025-09-06 01:43:31,356 - services.voice_service - INFO - Transcription confidence: 0.9978124
+2025-09-06 01:43:31,357 - services.voice_service - INFO - Transcribed: I need to schedule an appointment.
+2025-09-06 01:44:10,092 - services.voice_service - INFO - Transcription confidence: 0.0
+2025-09-06 01:44:37,578 - services.voice_service - INFO - Transcription confidence: 0.9836104
+2025-09-06 01:44:37,579 - services.voice_service - INFO - Transcribed: My name is Tarun Nanushka. I have an headache, and I want to, participate with doctor James Wilson.
+2025-09-06 01:45:03,340 - services.appointment_service - INFO - Handling voice appointment: intent=book_appointment, entities={'patient_name': 'Tarun Nanushka', 'date': '2024-09-08', 'time': None, 'doctor': 'Dr. James Wilson', 'reason': 'headache', 'phone': None, 'confirmation': 'no'}
+2025-09-06 01:45:15,873 - services.voice_service - INFO - Transcription confidence: 0.60527164
+2025-09-06 01:45:15,875 - services.voice_service - INFO - Transcribed: Tenay.
+2025-09-06 01:45:45,768 - services.voice_service - INFO - Transcription confidence: 0.0
+2025-09-06 01:45:54,134 - services.voice_service - INFO - Transcription confidence: 0.9951198
+2025-09-06 01:45:54,134 - services.voice_service - INFO - Transcribed: My name is Tarindo Danushka.
+2025-09-06 01:46:11,007 - api.voice - INFO - WebSocket client disconnected
+2025-09-06 01:46:46,414 - services.voice_service - INFO - Transcription confidence: 0.9086635
+2025-09-06 01:46:46,414 - services.voice_service - INFO - Transcribed: I have an headache, and doctor James is good than 9AM.
+2025-09-06 01:47:45,454 - services.voice_service - INFO - Transcription confidence: 0.99630857
+2025-09-06 01:47:45,455 - services.voice_service - INFO - Transcribed: Yes. That's correct.
+2025-09-06 01:47:58,304 - services.appointment_service - INFO - Handling voice appointment: intent=confirm_appointment, entities={'patient_name': 'Tarindo Danushka', 'date': '2024-09-08', 'time': '09:00', 'doctor': 'Dr. James Wilson', 'reason': 'headache', 'phone': None, 'confirmation': 'yes'}
+2025-09-06 01:47:58,384 - services.appointment_service - INFO - Creating new patient: Tarindo Danushka
+2025-09-06 01:47:58,480 - services.appointment_service - ERROR - Error creating/finding patient: E11000 duplicate key error collection: doctalk_ai.patients index: phone_1 dup key: { phone: null }, full error: {'index': 0, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: doctalk_ai.patients index: phone_1 dup key: { phone: null }', 'keyPattern': {'phone': 1}, 'keyValue': {'phone': None}}
+2025-09-06 01:48:20,641 - services.voice_service - INFO - Transcription confidence: 0.9990682
+2025-09-06 01:48:20,641 - services.voice_service - INFO - Transcribed: Phone number is 011.
+2025-09-06 01:49:44,945 - services.voice_service - ERROR - Intent extraction error: Timeout of 60.0s exceeded, last exception: 503 The model is overloaded. Please try again later.
+2025-09-06 01:50:08,522 - services.voice_service - INFO - Transcription confidence: 0.9906038
+2025-09-06 01:50:08,523 - services.voice_service - INFO - Transcribed: Yes. Please confirm.
+2025-09-06 01:51:18,802 - services.appointment_service - INFO - Handling voice appointment: intent=confirm_appointment, entities={'patient_name': 'Tarindo Danushka', 'date': '2024-09-08', 'time': '09:00', 'doctor': 'Dr. James Wilson', 'reason': 'headache', 'phone': '011', 'confirmation': 'yes'}
+2025-09-06 01:51:18,887 - services.appointment_service - INFO - Creating new patient: Tarindo Danushka
+2025-09-10 01:52:06,158 - main - INFO - Starting up DocTalk AI backend...
+2025-09-10 01:52:07,422 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-10 01:52:08,135 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-10 01:52:08,135 - main - INFO - Database connection established
+2025-09-10 01:52:44,164 - services.voice_service - INFO - Transcription confidence: 0.99458706
+2025-09-10 01:52:44,164 - services.voice_service - INFO - Transcribed: I need to schedule an appointment.
+2025-09-10 01:53:35,880 - services.voice_service - INFO - Transcription confidence: 0.9975915
+2025-09-10 01:53:35,887 - services.voice_service - INFO - Transcribed: My name is Smith. I haven't heard it.
+2025-09-10 01:53:39,826 - services.appointment_service - INFO - Handling voice appointment: intent=book_appointment, entities={'patient_name': 'Smith', 'date': '2024-09-10', 'time': None, 'doctor': None, 'reason': None, 'phone': None, 'confirmation': 'no'}
+2025-09-10 01:54:03,852 - services.voice_service - INFO - Transcription confidence: 0.9928189
+2025-09-10 01:54:03,852 - services.voice_service - INFO - Transcribed: Do you have doctor's names?
+2025-09-10 01:55:46,574 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 01:56:26,465 - api.doctors - ERROR - Error creating doctor: cannot encode object: datetime.time(9, 0), of type: <class 'datetime.time'>
+2025-09-10 01:56:26,465 - api.doctors - ERROR - Error creating doctor: cannot encode object: datetime.time(9, 0), of type: <class 'datetime.time'>
+2025-09-10 01:57:24,817 - api.doctors - ERROR - Error creating doctor: cannot encode object: datetime.time(9, 0), of type: <class 'datetime.time'>
+2025-09-10 01:57:24,818 - api.doctors - ERROR - Error creating doctor: cannot encode object: datetime.time(9, 0), of type: <class 'datetime.time'>
+2025-09-10 01:58:02,997 - api.patients - ERROR - Error creating patient: cannot encode object: datetime.date(2000, 4, 4), of type: <class 'datetime.date'>
+2025-09-10 01:58:02,997 - api.patients - ERROR - Error creating patient: cannot encode object: datetime.date(2000, 4, 4), of type: <class 'datetime.date'>
+2025-09-10 01:58:18,678 - api.patients - ERROR - Error creating patient: cannot encode object: datetime.date(2000, 4, 4), of type: <class 'datetime.date'>
+2025-09-10 01:58:18,678 - api.patients - ERROR - Error creating patient: cannot encode object: datetime.date(2000, 4, 4), of type: <class 'datetime.date'>
+2025-09-10 02:00:40,420 - api.patients - ERROR - Error creating patient: cannot encode object: datetime.date(2006, 2, 10), of type: <class 'datetime.date'>
+2025-09-10 02:00:40,421 - api.patients - ERROR - Error creating patient: cannot encode object: datetime.date(2006, 2, 10), of type: <class 'datetime.date'>
+2025-09-10 02:04:00,398 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-10 02:04:00,474 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-10 02:04:00,474 - main - INFO - Database connection closed
+2025-09-10 02:04:05,197 - main - INFO - Starting up DocTalk AI backend...
+2025-09-10 02:04:06,074 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-10 02:04:06,507 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-10 02:04:06,508 - main - INFO - Database connection established
+2025-09-10 02:05:38,699 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-10 02:05:38,789 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-10 02:05:38,790 - main - INFO - Database connection closed
+2025-09-10 02:05:41,170 - main - INFO - Starting up DocTalk AI backend...
+2025-09-10 02:05:42,300 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-10 02:05:42,790 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-10 02:05:42,792 - main - INFO - Database connection established
+2025-09-10 02:06:35,927 - api.doctors - ERROR - Error creating doctor: 1 validation error for DoctorResponse
+total_reviews
+  Field required [type=missing, input_value={'id': '68c08fd3165d5fca0... 9, 20, 36, 35, 749000)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-09-10 02:06:35,928 - api.doctors - ERROR - Error creating doctor: 1 validation error for DoctorResponse
+total_reviews
+  Field required [type=missing, input_value={'id': '68c08fd3165d5fca0... 9, 20, 36, 35, 749000)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-09-10 02:08:05,038 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-10 02:08:05,111 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-10 02:08:05,111 - main - INFO - Database connection closed
+2025-09-10 02:08:07,485 - main - INFO - Starting up DocTalk AI backend...
+2025-09-10 02:08:08,443 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-10 02:08:08,916 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-10 02:08:08,917 - main - INFO - Database connection established
+2025-09-10 02:08:21,012 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-10 02:08:21,082 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-10 02:08:21,082 - main - INFO - Database connection closed
+2025-09-10 02:08:23,681 - main - INFO - Starting up DocTalk AI backend...
+2025-09-10 02:08:24,530 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-10 02:08:25,003 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-10 02:08:25,004 - main - INFO - Database connection established
+2025-09-10 02:09:07,948 - services.voice_service - INFO - Transcription confidence: 0.961807
+2025-09-10 02:09:07,948 - services.voice_service - INFO - Transcribed: Tell me available doctors, please.
+2025-09-10 02:09:47,663 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 02:10:06,283 - services.voice_service - INFO - Transcription confidence: 0.95337516
+2025-09-10 02:10:06,283 - services.voice_service - INFO - Transcribed: Do you have professor doctor t h t h?
+2025-09-10 02:10:44,526 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 02:14:57,464 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 02:15:09,764 - services.voice_service - INFO - Transcription confidence: 0.9989795
+2025-09-10 02:15:09,765 - services.voice_service - INFO - Transcribed: I want to cancel my appointment.
+2025-09-10 02:15:37,200 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 02:16:04,168 - services.voice_service - INFO - Transcription confidence: 0.976109
+2025-09-10 02:16:04,168 - services.voice_service - INFO - Transcribed: My name is h t h t h t h t.
+2025-09-10 02:16:38,751 - services.voice_service - INFO - Transcription confidence: 0.984609
+2025-09-10 02:16:38,752 - services.voice_service - INFO - Transcribed: I want to cancel my point.
+2025-09-10 02:17:06,828 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 02:17:46,593 - services.voice_service - INFO - Transcription confidence: 0.96749663
+2025-09-10 02:17:46,593 - services.voice_service - INFO - Transcribed: My name is Tarun Anushka. Tomorrow, 9AM appointment, I want to can.
+2025-09-10 02:18:31,023 - services.voice_service - INFO - Transcription confidence: 0.99911886
+2025-09-10 02:18:31,023 - services.voice_service - INFO - Transcribed: Yes. Correct. Please cancel my appointment.
+2025-09-10 02:18:55,003 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 02:58:51,144 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 02:58:51,259 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-10 02:58:51,327 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-10 02:58:51,327 - main - INFO - Database connection closed
+2025-09-10 02:58:55,785 - main - INFO - Starting up DocTalk AI backend...
+2025-09-10 02:58:56,625 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-10 02:58:57,088 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-10 02:58:57,088 - main - INFO - Database connection established
+2025-09-10 02:59:02,525 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-10 02:59:02,582 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-10 02:59:02,583 - main - INFO - Database connection closed
+2025-09-10 02:59:05,136 - main - INFO - Starting up DocTalk AI backend...
+2025-09-10 02:59:05,966 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-10 02:59:06,432 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-10 02:59:06,433 - main - INFO - Database connection established
+2025-09-10 02:59:26,874 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-10 02:59:26,942 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-10 02:59:26,942 - main - INFO - Database connection closed
+2025-09-10 02:59:29,238 - main - INFO - Starting up DocTalk AI backend...
+2025-09-10 02:59:30,072 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-10 02:59:30,551 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-10 02:59:30,551 - main - INFO - Database connection established
+2025-09-10 03:00:09,955 - services.voice_service - INFO - Transcription confidence: 0.98895144
+2025-09-10 03:00:09,955 - services.voice_service - INFO - Transcribed: Please tell me available doctors, please.
+2025-09-10 03:00:32,622 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 03:00:41,961 - services.voice_service - INFO - Transcription confidence: 0.99556595
+2025-09-10 03:00:41,962 - services.voice_service - INFO - Transcribed: I want to cancel my appoint.
+2025-09-10 03:02:58,726 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 03:02:58,830 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-10 03:02:58,910 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-10 03:02:58,910 - main - INFO - Database connection closed
+2025-09-10 03:03:03,546 - main - INFO - Starting up DocTalk AI backend...
+2025-09-10 03:03:04,442 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-10 03:03:04,895 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-10 03:03:04,896 - main - INFO - Database connection established
+2025-09-10 03:03:18,075 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-10 03:03:18,130 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-10 03:03:18,130 - main - INFO - Database connection closed
+2025-09-10 03:03:20,229 - main - INFO - Starting up DocTalk AI backend...
+2025-09-10 03:03:21,316 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-10 03:03:21,775 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-10 03:03:21,781 - main - INFO - Database connection established
+2025-09-10 03:03:50,452 - services.voice_service - INFO - Transcription confidence: 0.99060786
+2025-09-10 03:03:50,452 - services.voice_service - INFO - Transcribed: I want to cancel my appointment.
+2025-09-10 03:08:04,921 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 03:08:05,017 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-10 03:08:05,083 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-10 03:08:05,083 - main - INFO - Database connection closed
+2025-09-10 03:08:10,143 - main - INFO - Starting up DocTalk AI backend...
+2025-09-10 03:08:10,998 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-10 03:08:11,562 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-10 03:08:11,562 - main - INFO - Database connection established
+2025-09-10 03:08:24,046 - services.voice_service - INFO - Transcription confidence: 0.9631717
+2025-09-10 03:08:24,047 - services.voice_service - INFO - Transcribed: Tell me available doctors, please.
+2025-09-10 03:08:24,116 - services.voice_service - INFO - Loaded 5 doctors from database
+2025-09-10 03:08:25,778 - services.voice_service - INFO - Loaded 5 doctors from database
+2025-09-10 03:08:28,042 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 378 credits are required for this request.
+2025-09-10 03:08:47,604 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 03:08:51,797 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 03:09:08,657 - services.voice_service - INFO - Transcription confidence: 0.9753158
+2025-09-10 03:09:08,657 - services.voice_service - INFO - Transcribed: Tell me about all doctors.
+2025-09-10 03:09:08,725 - services.voice_service - INFO - Loaded 5 doctors from database
+2025-09-10 03:09:10,434 - services.voice_service - INFO - Loaded 5 doctors from database
+2025-09-10 03:09:12,978 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 557 credits are required for this request.
+2025-09-10 03:09:41,621 - services.voice_service - INFO - Transcription confidence: 0.9753608
+2025-09-10 03:09:41,622 - services.voice_service - INFO - Transcribed: Why you don't have doctors t h t h t h h t?
+2025-09-10 03:09:41,698 - services.voice_service - INFO - Loaded 5 doctors from database
+2025-09-10 03:09:43,357 - services.voice_service - INFO - Loaded 5 doctors from database
+2025-09-10 03:09:47,294 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 540 credits are required for this request.
+2025-09-10 03:10:56,982 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 03:12:05,938 - services.voice_service - INFO - Transcription confidence: 0.9031223
+2025-09-10 03:12:05,938 - services.voice_service - INFO - Transcribed: Tell me about all doctors in avail of
+2025-09-10 03:12:06,017 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:12:07,662 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:12:10,035 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 505 credits are required for this request.
+2025-09-10 03:12:33,347 - services.voice_service - INFO - Transcription confidence: 0.981458
+2025-09-10 03:12:33,348 - services.voice_service - INFO - Transcribed: Now can you tell me about doctors, d h t h t?
+2025-09-10 03:12:33,429 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:12:35,224 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:12:37,473 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 592 credits are required for this request.
+2025-09-10 03:18:04,067 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 03:18:04,177 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-10 03:18:04,250 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-10 03:18:04,250 - main - INFO - Database connection closed
+2025-09-10 03:18:08,564 - main - INFO - Starting up DocTalk AI backend...
+2025-09-10 03:18:09,438 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-10 03:18:09,892 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-10 03:18:09,893 - main - INFO - Database connection established
+2025-09-10 03:18:40,428 - services.voice_service - INFO - Transcription confidence: 0.9840104
+2025-09-10 03:18:40,428 - services.voice_service - INFO - Transcribed: Tell me about available doctors, please.
+2025-09-10 03:18:40,510 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:18:43,807 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:18:46,428 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 591 credits are required for this request.
+2025-09-10 03:19:22,911 - services.voice_service - INFO - Transcription confidence: 0.9115097
+2025-09-10 03:19:22,915 - services.voice_service - INFO - Transcribed: Why are you saying like that doctor t h t h t h t appears to be an incomplete entry?
+2025-09-10 03:19:22,984 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:19:25,233 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:19:27,635 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 663 credits are required for this request.
+2025-09-10 03:21:31,341 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 03:24:15,517 - services.voice_service - INFO - Transcription confidence: 0.975901
+2025-09-10 03:24:15,517 - services.voice_service - INFO - Transcribed: Tell me about all doctors.
+2025-09-10 03:24:15,586 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:24:17,497 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:24:20,048 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 508 credits are required for this request.
+2025-09-10 03:24:52,372 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 03:27:22,008 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 03:30:17,917 - services.voice_service - INFO - Transcription confidence: 0.99928844
+2025-09-10 03:30:17,918 - services.voice_service - INFO - Transcribed: My name is Tarindu.
+2025-09-10 03:30:17,983 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:30:19,779 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:30:22,414 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 452 credits are required for this request.
+2025-09-10 03:30:51,366 - services.voice_service - INFO - Transcription confidence: 0.9080359
+2025-09-10 03:30:51,366 - services.voice_service - INFO - Transcribed: Doctor Sarah, I have an headache.
+2025-09-10 03:30:51,432 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:30:53,119 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:30:55,369 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 494 credits are required for this request.
+2025-09-10 03:32:05,806 - services.voice_service - INFO - Transcription confidence: 0.9938367
+2025-09-10 03:32:05,806 - services.voice_service - INFO - Transcribed: Yeah. 09:30AM is okay.
+2025-09-10 03:32:05,882 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:32:07,146 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:32:09,316 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 252 credits are required for this request.
+2025-09-10 03:32:21,506 - services.voice_service - INFO - Transcription confidence: 0.9377924
+2025-09-10 03:32:21,506 - services.voice_service - INFO - Transcribed: Yes. Please confirm.
+2025-09-10 03:32:21,589 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:32:23,184 - services.voice_service - INFO - Loaded 4 doctors from database
+2025-09-10 03:32:25,479 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 416 credits are required for this request.
+2025-09-10 03:32:34,520 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 03:32:43,883 - api.voice - INFO - WebSocket client disconnected
+2025-09-10 03:33:47,387 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-10 03:33:47,448 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-10 03:33:47,448 - main - INFO - Database connection closed
+2025-09-10 03:33:52,563 - main - INFO - Starting up DocTalk AI backend...
+2025-09-10 03:33:53,456 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-10 03:33:53,926 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-10 03:33:53,928 - main - INFO - Database connection established
+2025-09-10 03:34:08,365 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-10 03:34:08,436 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-10 03:34:08,436 - main - INFO - Database connection closed
+2025-09-10 03:34:11,304 - main - INFO - Starting up DocTalk AI backend...
+2025-09-10 03:34:12,153 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-10 03:34:12,598 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-10 03:34:12,598 - main - INFO - Database connection established
+2025-09-10 03:38:32,264 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-10 03:38:32,354 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-10 03:38:32,354 - main - INFO - Database connection closed
+2025-09-12 02:53:30,093 - main - INFO - Starting up DocTalk AI backend...
+2025-09-12 02:53:31,422 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-12 02:53:31,896 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-12 02:53:31,897 - main - INFO - Database connection established
+2025-09-12 02:55:45,530 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-12 02:55:45,642 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-12 02:55:45,642 - main - INFO - Database connection closed
+2025-09-12 02:55:49,039 - main - INFO - Starting up DocTalk AI backend...
+2025-09-12 02:55:50,139 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-12 02:55:50,689 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-12 02:55:50,689 - main - INFO - Database connection established
+2025-09-12 03:01:01,364 - api.voice - INFO - WebSocket client disconnected
+2025-09-12 03:02:47,382 - services.voice_service - INFO - Transcription confidence: 0.97305405
+2025-09-12 03:02:47,382 - services.voice_service - INFO - Transcribed: Tell me about all doctors.
+2025-09-12 03:02:52,776 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 573 credits are required for this request.
+2025-09-12 03:03:29,890 - api.voice - INFO - WebSocket client disconnected
+2025-09-12 03:04:01,853 - services.voice_service - INFO - Transcription confidence: 0.9966793
+2025-09-12 03:04:01,853 - services.voice_service - INFO - Transcribed: Do you have doctor, please?
+2025-09-12 03:04:06,427 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 547 credits are required for this request.
+2025-09-12 03:04:18,560 - services.voice_service - INFO - Transcription confidence: 0.9470069
+2025-09-12 03:04:18,561 - services.voice_service - INFO - Transcribed: Doctor Tharibanda.
+2025-09-12 03:04:22,652 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 596 credits are required for this request.
+2025-09-12 03:36:20,993 - api.voice - INFO - WebSocket client disconnected
+2025-09-12 03:36:21,083 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-12 03:36:21,579 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-12 03:36:21,581 - main - INFO - Database connection closed
+2025-09-12 03:36:30,628 - main - INFO - Starting up DocTalk AI backend...
+2025-09-12 03:36:31,831 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-12 03:36:32,327 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-12 03:36:32,328 - main - INFO - Database connection established
+2025-09-12 03:36:47,919 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-12 03:36:48,032 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-12 03:36:48,034 - main - INFO - Database connection closed
+2025-09-12 03:36:51,570 - main - INFO - Starting up DocTalk AI backend...
+2025-09-12 03:36:53,737 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-12 03:36:55,000 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-12 03:36:55,000 - main - INFO - Database connection established
+2025-09-12 03:37:27,907 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-12 03:37:27,967 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-12 03:37:27,967 - main - INFO - Database connection closed
+2025-09-12 03:37:32,447 - main - INFO - Starting up DocTalk AI backend...
+2025-09-12 03:37:33,681 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-12 03:37:34,202 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-12 03:37:34,204 - main - INFO - Database connection established
+2025-09-12 03:38:44,981 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-12 03:38:45,064 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-12 03:38:45,065 - main - INFO - Database connection closed
+2025-09-12 03:38:48,907 - main - INFO - Starting up DocTalk AI backend...
+2025-09-12 03:38:49,892 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-12 03:38:50,472 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-12 03:38:50,473 - main - INFO - Database connection established
+2025-09-12 03:38:50,473 - main - WARNING - Enhanced voice service initialization failed: No module named 'services.voice_service'
+2025-09-12 03:43:15,092 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-12 03:43:15,175 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-12 03:43:15,175 - main - INFO - Database connection closed
+2025-09-12 03:43:18,553 - main - INFO - Starting up DocTalk AI backend...
+2025-09-12 03:43:19,639 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-12 03:43:20,134 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-12 03:43:20,134 - main - INFO - Database connection established
+2025-09-12 03:43:20,134 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-12 03:44:18,381 - services.voice_service - INFO - Transcription confidence: 0.9294807
+2025-09-12 03:44:18,384 - services.voice_service - INFO - Transcribed: Tell me about all doctors.
+2025-09-12 03:44:18,384 - services.voice_service - INFO - Transcribed: Tell me about all doctors.
+2025-09-12 03:44:23,051 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 483 credits are required for this request.
+2025-09-12 03:44:23,053 - api.voice - ERROR - WebSocket error: Object of type WorkingHours is not JSON serializable
+2025-09-12 03:47:18,332 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-12 03:47:18,421 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-12 03:47:18,421 - main - INFO - Database connection closed
+2025-09-12 03:47:24,302 - main - INFO - Starting up DocTalk AI backend...
+2025-09-12 03:47:25,662 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-12 03:47:26,248 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-12 03:47:26,248 - main - INFO - Database connection established
+2025-09-12 03:47:26,248 - main - WARNING - Enhanced voice service initialization failed: cannot import name 'voice_service' from 'services.voice_service' (D:\My projects\AI DOk\AI-DOC\backend\services\voice_service.py)
+2025-09-12 03:47:59,709 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-12 03:47:59,786 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-12 03:47:59,787 - main - INFO - Database connection closed
+2025-09-12 03:48:04,158 - main - INFO - Starting up DocTalk AI backend...
+2025-09-12 03:48:05,277 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-12 03:48:05,770 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-12 03:48:05,770 - main - INFO - Database connection established
+2025-09-12 03:48:05,785 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-12 03:48:29,292 - services.voice_service - INFO - Transcription confidence: 0.99313366
+2025-09-12 03:48:29,292 - services.voice_service - INFO - Transcribed: Tell me about all doctors.
+2025-09-12 03:48:29,292 - services.voice_service - INFO - Transcribed: Tell me about all doctors.
+2025-09-12 03:48:33,836 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 479 credits are required for this request.
+2025-09-12 03:48:57,192 - api.voice - INFO - WebSocket client disconnected
+2025-09-12 03:49:10,416 - services.voice_service - INFO - Transcription confidence: 0.971862
+2025-09-12 03:49:10,416 - services.voice_service - INFO - Transcribed: My name is Tarun Darska. I have an headache. I won't
+2025-09-12 03:49:10,416 - services.voice_service - INFO - Transcribed: My name is Tarun Darska. I have an headache. I won't
+2025-09-12 03:49:14,688 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 673 credits are required for this request.
+2025-09-12 03:49:51,644 - services.voice_service - INFO - Transcription confidence: 0.9820562
+2025-09-12 03:49:51,650 - services.voice_service - INFO - Transcribed: And, today I
+2025-09-12 03:49:51,651 - services.voice_service - INFO - Transcribed: And, today I
+2025-09-12 03:49:55,844 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 615 credits are required for this request.
+2025-09-12 03:50:20,090 - services.voice_service - INFO - Transcription confidence: 0.99209267
+2025-09-12 03:50:20,090 - services.voice_service - INFO - Transcribed: Yeah. I want to, talk with doctor Tari Banda. And, today, I can
+2025-09-12 03:50:20,090 - services.voice_service - INFO - Transcribed: Yeah. I want to, talk with doctor Tari Banda. And, today, I can
+2025-09-12 03:50:23,857 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 435 credits are required for this request.
+2025-09-12 03:50:34,986 - services.voice_service - INFO - Transcription confidence: 0.9995988
+2025-09-12 03:50:34,989 - services.voice_service - INFO - Transcribed: Yes. Correct. Please confirm.
+2025-09-12 03:50:34,989 - services.voice_service - INFO - Transcribed: Yes. Correct. Please confirm.
+2025-09-12 03:50:38,871 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 553 credits are required for this request.
+2025-09-12 03:50:52,961 - services.voice_service - INFO - Transcription confidence: 0.92672074
+2025-09-12 03:50:52,962 - services.voice_service - INFO - Transcribed: Nine 9AM.
+2025-09-12 03:50:52,962 - services.voice_service - INFO - Transcribed: Nine 9AM.
+2025-09-12 03:50:57,437 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 406 credits are required for this request.
+2025-09-12 03:51:10,823 - services.voice_service - INFO - Transcription confidence: 0.99305594
+2025-09-12 03:51:10,823 - services.voice_service - INFO - Transcribed: Yes. Please confirm.
+2025-09-12 03:51:10,823 - services.voice_service - INFO - Transcribed: Yes. Please confirm.
+2025-09-12 03:51:14,936 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 555 credits are required for this request.
+2025-09-12 03:51:50,140 - services.voice_service - INFO - Transcription confidence: 0.9491962
+2025-09-12 03:51:50,140 - services.voice_service - INFO - Transcribed: I'm in headache, and please confirm this appointment.
+2025-09-12 03:51:50,141 - services.voice_service - INFO - Transcribed: I'm in headache, and please confirm this appointment.
+2025-09-12 03:51:54,543 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 642 credits are required for this request.
+2025-09-12 03:52:20,251 - services.voice_service - INFO - Transcription confidence: 0.9377793
+2025-09-12 03:52:20,251 - services.voice_service - INFO - Transcribed: Having some probing and sharp. Only only that.
+2025-09-12 03:52:20,251 - services.voice_service - INFO - Transcribed: Having some probing and sharp. Only only that.
+2025-09-12 03:52:24,735 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 624 credits are required for this request.
+2025-09-12 03:53:03,335 - services.voice_service - INFO - Transcription confidence: 0.9979322
+2025-09-12 03:53:03,335 - services.voice_service - INFO - Transcribed: Please confirm.
+2025-09-12 03:53:03,340 - services.voice_service - INFO - Transcribed: Please confirm.
+2025-09-12 03:53:07,771 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 678 credits are required for this request.
+2025-09-12 03:53:24,978 - services.voice_service - INFO - Transcription confidence: 0.9994254
+2025-09-12 03:53:24,978 - services.voice_service - INFO - Transcribed: This is my full name, and please confirm.
+2025-09-12 03:53:24,978 - services.voice_service - INFO - Transcribed: This is my full name, and please confirm.
+2025-09-12 03:53:29,181 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 632 credits are required for this request.
+2025-09-12 03:54:07,353 - services.voice_service - INFO - Transcription confidence: 0.99859303
+2025-09-12 03:54:07,353 - services.voice_service - INFO - Transcribed: My name is Tarindo Danushka. Please confirm.
+2025-09-12 03:54:07,354 - services.voice_service - INFO - Transcribed: My name is Tarindo Danushka. Please confirm.
+2025-09-12 03:54:12,375 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 690 credits are required for this request.
+2025-09-12 03:54:40,817 - api.voice - INFO - WebSocket client disconnected
+2025-09-12 03:55:22,372 - services.voice_service - INFO - Transcription confidence: 0.99276453
+2025-09-12 03:55:22,378 - services.voice_service - INFO - Transcribed: No. No any fever. Only have headache. Please confirm this appointment.
+2025-09-12 03:55:22,378 - services.voice_service - INFO - Transcribed: No. No any fever. Only have headache. Please confirm this appointment.
+2025-09-12 03:55:26,975 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 670 credits are required for this request.
+2025-09-12 03:55:39,135 - services.voice_service - INFO - Transcription confidence: 0.9990288
+2025-09-12 03:55:39,135 - services.voice_service - INFO - Transcribed: Yes. Please confirm.
+2025-09-12 03:55:39,135 - services.voice_service - INFO - Transcribed: Yes. Please confirm.
+2025-09-12 03:55:44,218 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 696 credits are required for this request.
+2025-09-12 03:56:02,621 - services.voice_service - INFO - Transcription confidence: 0.9928085
+2025-09-12 03:56:02,621 - services.voice_service - INFO - Transcribed: Yes. Confirm.
+2025-09-12 03:56:02,621 - services.voice_service - INFO - Transcribed: Yes. Confirm.
+2025-09-12 03:56:07,024 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 734 credits are required for this request.
+2025-09-12 03:56:20,391 - services.voice_service - INFO - Transcription confidence: 0.9978752
+2025-09-12 03:56:20,391 - services.voice_service - INFO - Transcribed: Yes. Confirm.
+2025-09-12 03:56:20,397 - services.voice_service - INFO - Transcribed: Yes. Confirm.
+2025-09-12 03:56:24,656 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 736 credits are required for this request.
+2025-09-12 03:57:39,959 - services.voice_service - INFO - Transcription confidence: 0.9980572
+2025-09-12 03:57:39,959 - services.voice_service - INFO - Transcribed: I give to all the details for you. Please confirm this appointment.
+2025-09-12 03:57:39,959 - services.voice_service - INFO - Transcribed: I give to all the details for you. Please confirm this appointment.
+2025-09-12 03:57:44,855 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 762 credits are required for this request.
+2025-09-12 03:57:59,267 - services.voice_service - INFO - Transcription confidence: 0.0
+2025-09-12 03:57:59,270 - services.voice_service - INFO - Transcribed: 
+2025-09-12 03:58:07,751 - services.voice_service - INFO - Transcription confidence: 0.0
+2025-09-12 03:58:07,751 - services.voice_service - INFO - Transcribed: 
+2025-09-12 03:58:15,951 - services.voice_service - INFO - Transcription confidence: 0.0
+2025-09-12 03:58:15,951 - services.voice_service - INFO - Transcribed: 
+2025-09-12 03:58:32,701 - services.voice_service - INFO - Transcription confidence: 0.99523443
+2025-09-12 03:58:32,701 - services.voice_service - INFO - Transcribed: Do you hear me?
+2025-09-12 03:58:32,701 - services.voice_service - INFO - Transcribed: Do you hear me?
+2025-09-12 03:58:37,001 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 634 credits are required for this request.
+2025-09-12 03:58:50,658 - services.voice_service - INFO - Transcription confidence: 0.0
+2025-09-12 03:58:50,659 - services.voice_service - INFO - Transcribed: 
+2025-09-12 03:58:58,186 - services.voice_service - INFO - Transcription confidence: 0.99476457
+2025-09-12 03:58:58,187 - services.voice_service - INFO - Transcribed: My name is Taridu Danushka.
+2025-09-12 03:58:58,187 - services.voice_service - INFO - Transcribed: My name is Taridu Danushka.
+2025-09-12 03:59:02,441 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 595 credits are required for this request.
+2025-09-12 03:59:18,109 - services.voice_service - INFO - Transcription confidence: 0.99834853
+2025-09-12 03:59:18,110 - services.voice_service - INFO - Transcribed: Yes. Please confirm.
+2025-09-12 03:59:18,111 - services.voice_service - INFO - Transcribed: Yes. Please confirm.
+2025-09-12 03:59:22,422 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 681 credits are required for this request.
+2025-09-12 04:00:19,158 - api.voice - INFO - WebSocket client disconnected
+2025-09-12 04:00:19,261 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-12 04:00:19,357 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-12 04:00:19,364 - main - INFO - Database connection closed
+2025-09-12 04:00:30,719 - main - INFO - Starting up DocTalk AI backend...
+2025-09-12 04:00:31,712 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-12 04:00:32,182 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-12 04:00:32,182 - main - INFO - Database connection established
+2025-09-12 04:00:32,182 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-12 04:00:39,069 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-12 04:00:39,162 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-12 04:00:39,163 - main - INFO - Database connection closed
+2025-09-12 04:00:43,861 - main - INFO - Starting up DocTalk AI backend...
+2025-09-12 04:00:45,191 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-12 04:00:45,701 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-12 04:00:45,702 - main - INFO - Database connection established
+2025-09-12 04:00:45,704 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-12 04:01:03,510 - services.voice_service - INFO - Transcription confidence: 0.9938617
+2025-09-12 04:01:03,510 - services.voice_service - INFO - Transcribed: I need to schedule an appointment.
+2025-09-12 04:01:03,511 - services.voice_service - INFO - Transcribed: I need to schedule an appointment.
+2025-09-12 04:01:09,057 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 565 credits are required for this request.
+2025-09-12 04:01:37,543 - services.voice_service - INFO - Transcription confidence: 0.9928741
+2025-09-12 04:01:37,543 - services.voice_service - INFO - Transcribed: My name is Taran Danushka. I have an headache. I want to, talk with.
+2025-09-12 04:01:37,543 - services.voice_service - INFO - Transcribed: My name is Taran Danushka. I have an headache. I want to, talk with.
+2025-09-12 04:01:41,696 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 121 credits remaining, while 499 credits are required for this request.
+2025-09-12 04:01:58,828 - services.voice_service - INFO - Transcription confidence: 0.9022358
+2025-09-12 04:01:58,828 - services.voice_service - INFO - Transcribed: Today, 9AM.
+2025-09-12 04:01:58,829 - services.voice_service - INFO - Transcribed: Today, 9AM.
+2025-09-12 04:01:59,453 - services.voice_service - ERROR - Gemini response error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 1
+}
+]
+2025-09-12 04:01:59,453 - services.voice_service - ERROR - Voice processing error: AI response generation failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 1
+}
+]
+2025-09-12 04:02:12,862 - services.voice_service - INFO - Transcription confidence: 0.99464536
+2025-09-12 04:02:12,862 - services.voice_service - INFO - Transcribed: Today, 9AM.
+2025-09-12 04:02:12,862 - services.voice_service - INFO - Transcribed: Today, 9AM.
+2025-09-12 04:02:13,702 - services.voice_service - ERROR - Gemini response error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 47
+}
+]
+2025-09-12 04:02:13,704 - services.voice_service - ERROR - Voice processing error: AI response generation failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 47
+}
+]
+2025-09-12 04:02:14,355 - services.voice_service - ERROR - ElevenLabs TTS error: This request exceeds your quota of 10000. You have 9 credits remaining, while 112 credits are required for this request.
+2025-09-12 04:02:57,611 - api.voice - INFO - WebSocket client disconnected
+2025-09-12 07:16:47,020 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-12 07:16:47,319 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-12 07:16:47,320 - main - INFO - Database connection closed
+2025-09-17 05:51:01,109 - main - INFO - Starting up DocTalk AI backend...
+2025-09-17 05:51:02,219 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 05:51:02,618 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 05:51:02,618 - main - INFO - Database connection established
+2025-09-17 05:51:02,649 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 11:48:25,286 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 11:48:25,356 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 11:48:25,357 - main - INFO - Database connection closed
+2025-09-17 11:48:33,380 - main - INFO - Starting up DocTalk AI backend...
+2025-09-17 11:48:34,447 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 11:48:34,855 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 11:48:34,855 - main - INFO - Database connection established
+2025-09-17 11:48:34,857 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 11:48:42,647 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 11:48:42,723 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 11:48:42,723 - main - INFO - Database connection closed
+2025-09-17 11:48:45,158 - main - INFO - Starting up DocTalk AI backend...
+2025-09-17 11:48:45,966 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 11:48:46,415 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 11:48:46,416 - main - INFO - Database connection established
+2025-09-17 11:48:46,419 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 11:48:46,643 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 11:48:46,710 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 11:48:46,710 - main - INFO - Database connection closed
+2025-09-17 11:48:49,785 - main - INFO - Starting up DocTalk AI backend...
+2025-09-17 11:48:50,996 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 11:48:51,682 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 11:48:51,682 - main - INFO - Database connection established
+2025-09-17 11:48:51,685 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 11:48:56,248 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 11:48:56,310 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 11:48:56,311 - main - INFO - Database connection closed
+2025-09-17 11:48:59,368 - main - INFO - Starting up DocTalk AI backend...
+2025-09-17 11:49:00,241 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 11:49:00,743 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 11:49:00,743 - main - INFO - Database connection established
+2025-09-17 11:49:00,745 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 11:49:01,285 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 11:49:01,352 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 11:49:01,352 - main - INFO - Database connection closed
+2025-09-17 11:49:04,375 - main - INFO - Starting up DocTalk AI backend...
+2025-09-17 11:49:05,288 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 11:49:05,735 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 11:49:05,735 - main - INFO - Database connection established
+2025-09-17 11:49:05,735 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 11:49:24,160 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 11:49:24,245 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 11:49:24,245 - main - INFO - Database connection closed
+2025-09-17 11:49:26,632 - main - INFO - Starting up DocTalk AI backend...
+2025-09-17 11:49:27,449 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 11:49:27,872 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 11:49:27,873 - main - INFO - Database connection established
+2025-09-17 11:49:27,875 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 11:49:31,201 - main - INFO - Starting up DocTalk AI backend...
+2025-09-17 11:49:32,200 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 11:49:32,598 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 11:49:32,598 - main - INFO - Database connection established
+2025-09-17 11:49:32,600 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 11:49:43,742 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 11:49:43,837 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 11:49:43,837 - main - INFO - Database connection closed
+2025-09-17 11:49:46,295 - main - INFO - Starting up DocTalk AI backend...
+2025-09-17 11:49:47,195 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 11:49:47,638 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 11:49:47,639 - main - INFO - Database connection established
+2025-09-17 11:49:47,642 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 11:49:50,930 - main - INFO - Starting up DocTalk AI backend...
+2025-09-17 11:49:51,870 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 11:49:52,318 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 11:49:52,318 - main - INFO - Database connection established
+2025-09-17 11:49:52,320 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 11:49:55,249 - main - INFO - Starting up DocTalk AI backend...
+2025-09-17 11:49:56,132 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 11:49:56,604 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 11:49:56,604 - main - INFO - Database connection established
+2025-09-17 11:49:56,604 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-17 11:54:14,248 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-17 11:54:14,328 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-17 11:54:14,328 - main - INFO - Database connection closed
+2025-09-17 11:54:17,354 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-17 11:54:18,347 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-17 11:54:18,805 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-17 11:54:18,805 - main - INFO - Database connection established
+2025-09-17 11:54:18,846 - main - WARNING - Could not create default users: No module named 'jwt'
+2025-09-17 11:54:18,848 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}

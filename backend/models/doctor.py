@@ -1,0 +1,103 @@
+from datetime import datetime, time
+from typing import Optional, List
+from pydantic import BaseModel, Field, ConfigDict
+
+class WorkingHours(BaseModel):
+    day: str = Field(..., description="Day of the week")
+    start_time: time = Field(..., description="Start time")
+    end_time: time = Field(..., description="End time")
+    is_available: bool = Field(default=True, description="Whether doctor is available on this day")
+
+class Doctor(BaseModel):
+    doctor_id: str = Field(..., description="Unique doctor identifier")
+    first_name: str = Field(..., description="Doctor's first name")
+    last_name: str = Field(..., description="Doctor's last name")
+    title: str = Field(default="Dr.", description="Professional title")
+    specialty: str = Field(..., description="Medical specialty")
+    department: Optional[str] = Field(None, description="Hospital department")
+    email: Optional[str] = Field(None, description="Email address")
+    phone: Optional[str] = Field(None, description="Phone number")
+    office_location: Optional[str] = Field(None, description="Office location")
+    education: Optional[List[str]] = Field(default_factory=list, description="Educational background")
+    certifications: Optional[List[str]] = Field(default_factory=list, description="Professional certifications")
+    years_experience: Optional[int] = Field(None, description="Years of experience")
+    languages: Optional[List[str]] = Field(default_factory=list, description="Languages spoken")
+    bio: Optional[str] = Field(None, description="Professional biography")
+    consultation_fee: Optional[float] = Field(None, description="Consultation fee")
+    working_hours: Optional[List[WorkingHours]] = Field(default_factory=list, description="Working hours")
+    is_available: bool = Field(default=True, description="Currently available for appointments")
+    is_active: bool = Field(default=True, description="Active status")
+    rating: Optional[float] = Field(default=None, description="Average rating")
+    total_reviews: int = Field(default=0, description="Total number of reviews")
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+    updated_at: datetime = Field(default_factory=datetime.utcnow)
+
+    model_config = ConfigDict(
+        populate_by_name=True,
+        arbitrary_types_allowed=True
+    )
+
+class DoctorCreate(BaseModel):
+    first_name: str = Field(..., description="Doctor's first name")
+    last_name: str = Field(..., description="Doctor's last name")
+    title: str = Field(default="Dr.", description="Professional title")
+    specialty: str = Field(..., description="Medical specialty")
+    department: Optional[str] = Field(None, description="Hospital department")
+    email: Optional[str] = Field(None, description="Email address")
+    phone: Optional[str] = Field(None, description="Phone number")
+    office_location: Optional[str] = Field(None, description="Office location")
+    education: Optional[List[str]] = Field(default_factory=list, description="Educational background")
+    certifications: Optional[List[str]] = Field(default_factory=list, description="Professional certifications")
+    years_experience: Optional[int] = Field(None, description="Years of experience")
+    languages: Optional[List[str]] = Field(default_factory=list, description="Languages spoken")
+    bio: Optional[str] = Field(None, description="Professional biography")
+    consultation_fee: Optional[float] = Field(None, description="Consultation fee")
+    working_hours: Optional[List[WorkingHours]] = Field(default_factory=list, description="Working hours")
+    is_available: bool = Field(default=True, description="Currently available for appointments")
+    is_active: bool = Field(default=True, description="Active status")
+
+class DoctorUpdate(BaseModel):
+    first_name: Optional[str] = Field(None, description="Doctor's first name")
+    last_name: Optional[str] = Field(None, description="Doctor's last name")
+    title: Optional[str] = Field(None, description="Professional title")
+    specialty: Optional[str] = Field(None, description="Medical specialty")
+    department: Optional[str] = Field(None, description="Hospital department")
+    email: Optional[str] = Field(None, description="Email address")
+    phone: Optional[str] = Field(None, description="Phone number")
+    office_location: Optional[str] = Field(None, description="Office location")
+    education: Optional[List[str]] = Field(None, description="Educational background")
+    certifications: Optional[List[str]] = Field(None, description="Professional certifications")
+    years_experience: Optional[int] = Field(None, description="Years of experience")
+    languages: Optional[List[str]] = Field(None, description="Languages spoken")
+    bio: Optional[str] = Field(None, description="Professional biography")
+    consultation_fee: Optional[float] = Field(None, description="Consultation fee")
+    working_hours: Optional[List[WorkingHours]] = Field(None, description="Working hours")
+    is_available: Optional[bool] = Field(None, description="Currently available for appointments")
+    is_active: Optional[bool] = Field(None, description="Active status")
+
+class DoctorResponse(BaseModel):
+    id: str = Field(..., description="Doctor ID")
+    doctor_id: str = Field(..., description="Unique doctor identifier")
+    first_name: str = Field(..., description="Doctor's first name")
+    last_name: str = Field(..., description="Doctor's last name")
+    title: str = Field(..., description="Professional title")
+    specialty: str = Field(..., description="Medical specialty")
+    department: Optional[str] = Field(None, description="Hospital department")
+    email: Optional[str] = Field(None, description="Email address")
+    phone: Optional[str] = Field(None, description="Phone number")
+    office_location: Optional[str] = Field(None, description="Office location")
+    education: Optional[List[str]] = Field(None, description="Educational background")
+    certifications: Optional[List[str]] = Field(None, description="Professional certifications")
+    years_experience: Optional[int] = Field(None, description="Years of experience")
+    languages: Optional[List[str]] = Field(None, description="Languages spoken")
+    bio: Optional[str] = Field(None, description="Professional biography")
+    consultation_fee: Optional[float] = Field(None, description="Consultation fee")
+    working_hours: Optional[List[WorkingHours]] = Field(None, description="Working hours")
+    is_available: bool = Field(..., description="Currently available for appointments")
+    is_active: bool = Field(..., description="Active status")
+    rating: Optional[float] = Field(None, description="Average rating")
+    total_reviews: int = Field(default=0, description="Total number of reviews")  # FIXED: Set default
+    created_at: datetime = Field(..., description="Creation timestamp")
+    updated_at: datetime = Field(..., description="Last update timestamp")
+
+    model_config = ConfigDict(from_attributes=True)
