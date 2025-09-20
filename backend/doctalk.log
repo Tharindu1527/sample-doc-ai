@@ -1694,3 +1694,587 @@ ImportError: email-validator is not installed, run `pip install pydantic[email]`
 2025-09-18 02:49:40,829 - database.mongodb - INFO - Database indexes created/verified successfully
 2025-09-18 02:49:40,829 - main - INFO - Database connection established
 2025-09-18 02:49:41,103 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 03:23:48,960 - services.auth_service - ERROR - JWT decoding error with PyJWT: Signature has expired
+2025-09-18 03:23:48,979 - services.auth_service - ERROR - JWT decoding error with python-jose: Signature has expired.
+2025-09-18 03:24:44,850 - services.auth_service - INFO - User authenticated successfully: dilum@gmail.com
+2025-09-18 03:24:44,850 - services.auth_service - INFO - Tokens created for user: dilum@gmail.com
+2025-09-18 03:24:44,850 - api.auth - INFO - User logged in: dilum@gmail.com
+2025-09-18 03:24:45,242 - api.appointments_protected - ERROR - Error getting appointment statistics: 'AppointmentService' object has no attribute 'get_patient_appointment_statistics'
+2025-09-18 03:24:48,163 - api.appointments_protected - ERROR - Error getting appointment statistics: 'AppointmentService' object has no attribute 'get_patient_appointment_statistics'
+2025-09-18 03:29:25,266 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 03:29:25,330 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 03:29:25,330 - main - INFO - Database connection closed
+2025-09-18 03:29:28,690 - main - INFO - ✓ router loaded successfully
+2025-09-18 03:29:28,732 - main - INFO - ✓ router loaded successfully
+2025-09-18 03:29:28,732 - main - INFO - ✓ router loaded successfully
+2025-09-18 03:29:28,776 - main - INFO - ✓ router loaded successfully
+2025-09-18 03:29:29,558 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 03:29:29,561 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 03:29:30,378 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 03:29:30,800 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 03:29:30,801 - main - INFO - Database connection established
+2025-09-18 03:29:30,975 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 03:29:42,626 - api.appointments_protected - ERROR - Error getting appointment statistics: 'AppointmentService' object has no attribute 'get_patient_appointment_statistics'
+2025-09-18 03:29:43,014 - api.appointments_protected - ERROR - Error getting appointment statistics: 'AppointmentService' object has no attribute 'get_patient_appointment_statistics'
+2025-09-18 06:03:29,089 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:03:29,161 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:03:29,161 - main - INFO - Database connection closed
+2025-09-18 06:03:31,640 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:31,696 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:31,708 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:31,740 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:32,708 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:03:32,711 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:03:33,547 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:03:33,979 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:03:33,981 - main - INFO - Database connection established
+2025-09-18 06:03:34,169 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:03:36,251 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:36,281 - main - ERROR - ✗ Failed to load router: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:03:36,309 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:36,342 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:37,341 - main - ERROR - ✗ Failed to load enhanced voice router: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:03:37,342 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:03:38,173 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:03:38,606 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:03:38,606 - main - INFO - Database connection established
+2025-09-18 06:03:38,810 - main - WARNING - Enhanced voice service initialization failed: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:03:41,708 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:03:41,775 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:03:41,775 - main - INFO - Database connection closed
+2025-09-18 06:03:43,786 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:43,817 - main - ERROR - ✗ Failed to load router: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:03:43,846 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:43,879 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:45,300 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:45,326 - main - ERROR - ✗ Failed to load router: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:03:45,350 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:45,388 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:46,155 - main - ERROR - ✗ Failed to load enhanced voice router: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:03:46,157 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:03:47,054 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:03:47,460 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:03:47,466 - main - INFO - Database connection established
+2025-09-18 06:03:47,726 - main - WARNING - Enhanced voice service initialization failed: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:03:57,959 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:03:58,046 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:03:58,046 - main - INFO - Database connection closed
+2025-09-18 06:03:59,609 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:59,650 - main - ERROR - ✗ Failed to load router: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:03:59,683 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:03:59,719 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:04:00,595 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:04:00,602 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:04:01,473 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:04:01,867 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:04:01,867 - main - INFO - Database connection established
+2025-09-18 06:04:02,066 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:04:05,332 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:04:05,361 - main - ERROR - ✗ Failed to load router: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:04:05,394 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:04:05,429 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:04:06,336 - main - ERROR - ✗ Failed to load enhanced voice router: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:04:06,338 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:04:07,096 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:04:07,543 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:04:07,543 - main - INFO - Database connection established
+2025-09-18 06:04:07,766 - main - WARNING - Enhanced voice service initialization failed: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:04:14,603 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:04:14,663 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:04:14,663 - main - INFO - Database connection closed
+2025-09-18 06:04:16,105 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:04:16,135 - main - ERROR - ✗ Failed to load router: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:04:16,164 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:04:16,195 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:04:17,025 - main - ERROR - ✗ Failed to load enhanced voice router: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:04:17,027 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:04:17,855 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:04:18,271 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:04:18,271 - main - INFO - Database connection established
+2025-09-18 06:04:18,454 - main - WARNING - Enhanced voice service initialization failed: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:04:27,010 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:04:27,099 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:04:27,099 - main - INFO - Database connection closed
+2025-09-18 06:04:28,568 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:04:28,598 - main - ERROR - ✗ Failed to load router: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:04:28,626 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:04:28,646 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:04:29,493 - main - ERROR - ✗ Failed to load enhanced voice router: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:04:29,498 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:04:30,274 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:04:30,657 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:04:30,657 - main - INFO - Database connection established
+2025-09-18 06:04:30,849 - main - WARNING - Enhanced voice service initialization failed: expected an indented block after function definition on line 611 (appointment_service.py, line 612)
+2025-09-18 06:04:50,803 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:04:50,890 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:04:50,890 - main - INFO - Database connection closed
+2025-09-18 06:04:52,139 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:04:52,202 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:04:52,212 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:04:52,240 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:04:53,022 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:04:53,025 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:04:53,923 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:04:54,368 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:04:54,384 - main - INFO - Database connection established
+2025-09-18 06:04:54,586 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:05:29,927 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:05:29,998 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:05:29,999 - main - INFO - Database connection closed
+2025-09-18 06:05:32,089 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:05:32,144 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:05:32,153 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:05:32,183 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:05:32,897 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:05:32,899 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:05:33,745 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:05:34,221 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:05:34,221 - main - INFO - Database connection established
+2025-09-18 06:05:34,408 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:06:44,014 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:06:44,087 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:06:44,087 - main - INFO - Database connection closed
+2025-09-18 06:06:45,803 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:06:45,865 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:06:45,880 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:06:45,911 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:06:46,710 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:06:46,715 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:06:47,599 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:06:48,098 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:06:48,100 - main - INFO - Database connection established
+2025-09-18 06:06:48,328 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:06:58,257 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:06:58,342 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:06:58,342 - main - INFO - Database connection closed
+2025-09-18 06:06:59,711 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:06:59,774 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:06:59,789 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:06:59,816 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:07:00,568 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:07:00,570 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:07:01,358 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:07:01,760 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:07:01,760 - main - INFO - Database connection established
+2025-09-18 06:07:01,961 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:07:24,866 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:07:24,927 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:07:24,927 - main - INFO - Database connection closed
+2025-09-18 06:07:26,481 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:07:26,531 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:07:26,548 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:07:26,582 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:07:27,846 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:07:27,888 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:07:27,901 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:07:27,935 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:07:28,697 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:07:28,700 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:07:29,534 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:07:29,976 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:07:29,976 - main - INFO - Database connection established
+2025-09-18 06:07:30,183 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:08:19,510 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:08:19,583 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:08:19,583 - main - INFO - Database connection closed
+2025-09-18 06:08:21,033 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:08:21,085 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:08:21,096 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:08:21,126 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:08:21,937 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:08:21,940 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:08:23,079 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:08:23,461 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:08:23,461 - main - INFO - Database connection established
+2025-09-18 06:08:23,668 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:08:37,026 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:08:37,101 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:08:37,101 - main - INFO - Database connection closed
+2025-09-18 06:08:38,590 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:08:38,630 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:08:38,641 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:08:38,668 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:08:39,412 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:08:39,415 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:08:40,248 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:08:40,690 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:08:40,690 - main - INFO - Database connection established
+2025-09-18 06:08:40,883 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:11:04,376 - services.auth_service - ERROR - JWT decoding error with PyJWT: Signature has expired
+2025-09-18 06:11:04,404 - services.auth_service - ERROR - JWT decoding error with python-jose: Signature has expired.
+2025-09-18 06:11:04,567 - services.auth_service - ERROR - JWT decoding error with PyJWT: Signature has expired
+2025-09-18 06:11:04,567 - services.auth_service - ERROR - JWT decoding error with python-jose: Signature has expired.
+2025-09-18 06:11:06,945 - services.auth_service - INFO - User authenticated successfully: dilum@gmail.com
+2025-09-18 06:11:06,948 - services.auth_service - INFO - Tokens created for user: dilum@gmail.com
+2025-09-18 06:11:06,948 - api.auth - INFO - User logged in: dilum@gmail.com
+2025-09-18 06:11:33,124 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 06:12:23,262 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 06:12:57,533 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:12:57,607 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:12:57,607 - main - INFO - Database connection closed
+2025-09-18 06:12:59,300 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:12:59,365 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:12:59,365 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:12:59,406 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:00,131 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:13:00,131 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:13:01,883 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:13:02,516 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:13:02,516 - main - INFO - Database connection established
+2025-09-18 06:13:02,779 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:13:05,043 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:05,096 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:05,096 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:05,133 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:05,887 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:13:05,888 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:13:06,703 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:13:07,126 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:13:07,126 - main - INFO - Database connection established
+2025-09-18 06:13:07,330 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:13:20,053 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:13:20,115 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:13:20,116 - main - INFO - Database connection closed
+2025-09-18 06:13:21,493 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:21,554 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:21,566 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:21,598 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:22,401 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:13:22,404 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:13:23,205 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:13:23,599 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:13:23,599 - main - INFO - Database connection established
+2025-09-18 06:13:23,781 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:13:30,788 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:13:30,868 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:13:30,868 - main - INFO - Database connection closed
+2025-09-18 06:13:32,359 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:32,416 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:32,426 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:32,457 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:33,220 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:13:33,221 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:13:34,073 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:13:34,493 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:13:34,493 - main - INFO - Database connection established
+2025-09-18 06:13:34,704 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:13:34,922 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:13:34,986 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:13:34,986 - main - INFO - Database connection closed
+2025-09-18 06:13:36,972 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:37,027 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:37,038 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:37,069 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:37,806 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:13:37,808 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:13:38,634 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:13:39,076 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:13:39,076 - main - INFO - Database connection established
+2025-09-18 06:13:39,268 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:13:54,826 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:13:54,910 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:13:54,910 - main - INFO - Database connection closed
+2025-09-18 06:13:56,330 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:56,382 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:56,382 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:56,429 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:13:57,216 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:13:57,218 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:13:58,175 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:13:58,604 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:13:58,604 - main - INFO - Database connection established
+2025-09-18 06:13:58,828 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:14:00,764 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:14:00,821 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:14:00,825 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:14:00,866 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:14:01,597 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:14:01,599 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:14:02,343 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:14:02,758 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:14:02,759 - main - INFO - Database connection established
+2025-09-18 06:14:02,946 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:14:29,040 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 06:14:37,580 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:14:37,637 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:14:37,637 - main - INFO - Database connection closed
+2025-09-18 06:14:41,327 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:14:41,366 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:14:41,381 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:14:41,408 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:14:42,287 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:14:42,291 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:14:43,218 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:14:43,597 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:14:43,597 - main - INFO - Database connection established
+2025-09-18 06:14:43,788 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:15:00,195 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:15:00,262 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:15:00,262 - main - INFO - Database connection closed
+2025-09-18 06:15:01,418 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:15:01,487 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:15:01,497 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:15:01,529 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:15:02,270 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:15:02,276 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:15:03,186 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:15:03,584 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:15:03,584 - main - INFO - Database connection established
+2025-09-18 06:15:03,769 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:15:31,414 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 06:15:31,812 - api.appointments_protected - ERROR - Error getting appointment statistics: 'AppointmentService' object has no attribute 'get_patient_appointment_statistics'
+2025-09-18 06:15:32,053 - api.appointments_protected - ERROR - Error getting appointment statistics: 'AppointmentService' object has no attribute 'get_patient_appointment_statistics'
+2025-09-18 06:16:41,738 - api.appointments_protected - ERROR - Error getting appointment statistics: 'AppointmentService' object has no attribute 'get_patient_appointment_statistics'
+2025-09-18 06:16:42,211 - api.appointments_protected - ERROR - Error getting appointment statistics: 'AppointmentService' object has no attribute 'get_patient_appointment_statistics'
+2025-09-18 06:22:44,957 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 06:22:45,339 - api.appointments_protected - ERROR - Error getting appointment statistics: 'AppointmentService' object has no attribute 'get_patient_appointment_statistics'
+2025-09-18 06:22:45,762 - api.appointments_protected - ERROR - Error getting appointment statistics: 'AppointmentService' object has no attribute 'get_patient_appointment_statistics'
+2025-09-18 06:23:56,696 - services.auth_service - INFO - Doctor record created: D202509188AFE1C57
+2025-09-18 06:23:56,831 - services.auth_service - INFO - User registered successfully: dilum34@gmail.com
+2025-09-18 06:23:56,831 - api.auth - INFO - New user registered: dilum34@gmail.com
+2025-09-18 06:23:57,636 - services.auth_service - INFO - User authenticated successfully: dilum34@gmail.com
+2025-09-18 06:23:57,636 - services.auth_service - INFO - Tokens created for user: dilum34@gmail.com
+2025-09-18 06:23:57,636 - api.auth - INFO - User logged in: dilum34@gmail.com
+2025-09-18 06:23:58,041 - api.appointments_protected - ERROR - Error getting appointment statistics: 'AppointmentService' object has no attribute 'get_doctor_appointment_statistics'
+2025-09-18 06:24:03,844 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 06:24:37,308 - services.auth_service - INFO - User authenticated successfully: dilum@gmail.com
+2025-09-18 06:24:37,308 - services.auth_service - INFO - Tokens created for user: dilum@gmail.com
+2025-09-18 06:24:37,308 - api.auth - INFO - User logged in: dilum@gmail.com
+2025-09-18 06:24:37,713 - api.appointments_protected - ERROR - Error getting appointment statistics: 'AppointmentService' object has no attribute 'get_patient_appointment_statistics'
+2025-09-18 06:24:48,600 - api.appointments_protected - ERROR - Error getting appointment statistics: 'AppointmentService' object has no attribute 'get_patient_appointment_statistics'
+2025-09-18 06:24:54,621 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 06:25:23,511 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:25:23,584 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:25:23,584 - main - INFO - Database connection closed
+2025-09-18 06:25:26,363 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:25:26,405 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:25:26,418 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:25:26,446 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:25:27,296 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:25:27,301 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:25:28,315 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:25:28,703 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:25:28,703 - main - INFO - Database connection established
+2025-09-18 06:25:29,064 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:27:54,180 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:27:54,250 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:27:54,250 - main - INFO - Database connection closed
+2025-09-18 06:27:55,726 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:27:55,792 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:27:55,802 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:27:55,825 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:27:56,711 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:27:56,714 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:27:57,603 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:27:58,071 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:27:58,072 - main - INFO - Database connection established
+2025-09-18 06:27:58,284 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:28:11,449 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:28:11,526 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:28:11,526 - main - INFO - Database connection closed
+2025-09-18 06:28:12,908 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:28:12,966 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:28:12,974 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:28:13,012 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:28:13,824 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:28:13,824 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:28:14,858 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:28:15,281 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:28:15,281 - main - INFO - Database connection established
+2025-09-18 06:28:15,455 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:28:23,781 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 06:28:23,851 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 06:28:23,866 - main - INFO - Database connection closed
+2025-09-18 06:28:25,359 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:28:25,414 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:28:25,430 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:28:25,456 - main - INFO - ✓ router loaded successfully
+2025-09-18 06:28:26,253 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 06:28:26,253 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 06:28:27,496 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 06:28:27,881 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 06:28:27,882 - main - INFO - Database connection established
+2025-09-18 06:28:28,048 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 06:28:36,566 - api.appointments_protected - INFO - Getting appointment statistics for user dilum@gmail.com (role: patient)
+2025-09-18 06:28:36,886 - api.appointments_protected - INFO - Successfully retrieved statistics: {'total_appointments': 0, 'upcoming': 0, 'this_month': 0, 'by_status': {}, 'by_doctor': {}}
+2025-09-18 06:28:37,281 - api.appointments_protected - INFO - Getting appointment statistics for user dilum@gmail.com (role: patient)
+2025-09-18 06:28:37,622 - api.appointments_protected - INFO - Successfully retrieved statistics: {'total_appointments': 0, 'upcoming': 0, 'this_month': 0, 'by_status': {}, 'by_doctor': {}}
+2025-09-18 06:28:45,324 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 06:31:41,596 - api.appointments_protected - INFO - Getting appointment statistics for user dilum@gmail.com (role: patient)
+2025-09-18 06:31:42,119 - api.appointments_protected - INFO - Successfully retrieved statistics: {'total_appointments': 0, 'upcoming': 0, 'this_month': 0, 'by_status': {}, 'by_doctor': {}}
+2025-09-18 06:31:42,507 - api.appointments_protected - INFO - Getting appointment statistics for user dilum@gmail.com (role: patient)
+2025-09-18 06:31:42,883 - api.appointments_protected - INFO - Successfully retrieved statistics: {'total_appointments': 0, 'upcoming': 0, 'this_month': 0, 'by_status': {}, 'by_doctor': {}}
+2025-09-18 06:31:58,417 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 06:32:56,867 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 06:32:57,243 - api.appointments_protected - INFO - Getting appointment statistics for user dilum@gmail.com (role: patient)
+2025-09-18 06:32:57,580 - api.appointments_protected - INFO - Successfully retrieved statistics: {'total_appointments': 0, 'upcoming': 0, 'this_month': 0, 'by_status': {}, 'by_doctor': {}}
+2025-09-18 06:32:57,977 - api.appointments_protected - INFO - Getting appointment statistics for user dilum@gmail.com (role: patient)
+2025-09-18 06:32:58,324 - api.appointments_protected - INFO - Successfully retrieved statistics: {'total_appointments': 0, 'upcoming': 0, 'this_month': 0, 'by_status': {}, 'by_doctor': {}}
+2025-09-18 06:33:14,496 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 07:28:28,778 - services.auth_service - ERROR - JWT decoding error with PyJWT: Signature has expired
+2025-09-18 07:28:28,808 - services.auth_service - ERROR - JWT decoding error with python-jose: Signature has expired.
+2025-09-18 07:28:30,867 - services.auth_service - INFO - User authenticated successfully: dilum@gmail.com
+2025-09-18 07:28:30,868 - services.auth_service - INFO - Tokens created for user: dilum@gmail.com
+2025-09-18 07:28:30,868 - api.auth - INFO - User logged in: dilum@gmail.com
+2025-09-18 07:28:31,514 - api.appointments_protected - INFO - Getting appointment statistics for user dilum@gmail.com (role: patient)
+2025-09-18 07:28:31,857 - api.appointments_protected - INFO - Successfully retrieved statistics: {'total_appointments': 0, 'upcoming': 0, 'this_month': 0, 'by_status': {}, 'by_doctor': {}}
+2025-09-18 07:28:35,160 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 07:29:15,891 - api.appointments_protected - INFO - Getting appointment statistics for user dilum@gmail.com (role: patient)
+2025-09-18 07:29:16,201 - api.appointments_protected - INFO - Successfully retrieved statistics: {'total_appointments': 0, 'upcoming': 0, 'this_month': 0, 'by_status': {}, 'by_doctor': {}}
+2025-09-18 07:29:16,579 - api.appointments_protected - INFO - Getting appointment statistics for user dilum@gmail.com (role: patient)
+2025-09-18 07:29:16,911 - api.appointments_protected - INFO - Successfully retrieved statistics: {'total_appointments': 0, 'upcoming': 0, 'this_month': 0, 'by_status': {}, 'by_doctor': {}}
+2025-09-18 07:29:26,178 - api.voice - INFO - WebSocket client disconnected
+2025-09-18 07:30:19,277 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 07:30:19,361 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 07:30:19,361 - main - INFO - Database connection closed
+2025-09-18 07:30:21,442 - main - INFO - ✓ router loaded successfully
+2025-09-18 07:30:21,503 - main - INFO - ✓ router loaded successfully
+2025-09-18 07:30:21,514 - main - INFO - ✓ router loaded successfully
+2025-09-18 07:30:21,545 - main - INFO - ✓ router loaded successfully
+2025-09-18 07:30:22,316 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 07:30:22,322 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 07:30:23,219 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 07:30:23,673 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 07:30:23,673 - main - INFO - Database connection established
+2025-09-18 07:30:23,885 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-18 07:30:32,718 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-18 07:30:32,794 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-18 07:30:32,794 - main - INFO - Database connection closed
+2025-09-18 07:30:34,922 - main - INFO - ✓ router loaded successfully
+2025-09-18 07:30:34,968 - main - INFO - ✓ router loaded successfully
+2025-09-18 07:30:34,979 - main - INFO - ✓ router loaded successfully
+2025-09-18 07:30:35,010 - main - INFO - ✓ router loaded successfully
+2025-09-18 07:30:35,721 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-18 07:30:35,723 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-18 07:30:36,537 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-18 07:30:36,987 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-18 07:30:36,997 - main - INFO - Database connection established
+2025-09-18 07:30:37,193 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-20 05:33:52,385 - main - INFO - ✓ router loaded successfully
+2025-09-20 05:33:52,436 - main - INFO - ✓ router loaded successfully
+2025-09-20 05:33:52,450 - main - INFO - ✓ router loaded successfully
+2025-09-20 05:33:52,493 - main - INFO - ✓ router loaded successfully
+2025-09-20 05:33:53,854 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-20 05:33:53,854 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-20 05:33:55,173 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-20 05:33:55,605 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-20 05:33:55,605 - main - INFO - Database connection established
+2025-09-20 05:33:55,805 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-20 05:33:57,165 - services.auth_service - INFO - User authenticated successfully: dilum@gmail.com
+2025-09-20 05:33:57,166 - services.auth_service - INFO - Tokens created for user: dilum@gmail.com
+2025-09-20 05:33:57,166 - api.auth - INFO - User logged in: dilum@gmail.com
+2025-09-20 05:33:57,934 - api.appointments_protected - INFO - Getting appointment statistics for user dilum@gmail.com (role: patient)
+2025-09-20 05:33:58,298 - api.appointments_protected - INFO - Successfully retrieved statistics: {'total_appointments': 0, 'upcoming': 0, 'this_month': 0, 'by_status': {}, 'by_doctor': {}}
+2025-09-20 05:34:03,597 - api.appointments_protected - INFO - Getting appointment statistics for user dilum@gmail.com (role: patient)
+2025-09-20 05:34:03,962 - api.appointments_protected - INFO - Successfully retrieved statistics: {'total_appointments': 0, 'upcoming': 0, 'this_month': 0, 'by_status': {}, 'by_doctor': {}}
+2025-09-20 05:34:08,023 - api.voice - INFO - WebSocket client disconnected
+2025-09-20 05:34:08,400 - api.appointments_protected - INFO - Getting appointment statistics for user dilum@gmail.com (role: patient)
+2025-09-20 05:34:08,730 - api.appointments_protected - INFO - Successfully retrieved statistics: {'total_appointments': 0, 'upcoming': 0, 'this_month': 0, 'by_status': {}, 'by_doctor': {}}
+2025-09-20 05:34:09,117 - api.appointments_protected - INFO - Getting appointment statistics for user dilum@gmail.com (role: patient)
+2025-09-20 05:34:09,480 - api.appointments_protected - INFO - Successfully retrieved statistics: {'total_appointments': 0, 'upcoming': 0, 'this_month': 0, 'by_status': {}, 'by_doctor': {}}
+2025-09-20 05:34:18,617 - api.voice - INFO - WebSocket client disconnected
+2025-09-20 05:38:21,613 - services.auth_service - INFO - User authenticated successfully: doctor@doctalk.com
+2025-09-20 05:38:21,613 - services.auth_service - INFO - Tokens created for user: doctor@doctalk.com
+2025-09-20 05:38:21,614 - api.auth - INFO - User logged in: doctor@doctalk.com
+2025-09-20 05:38:22,016 - api.appointments_protected - INFO - Getting appointment statistics for user doctor@doctalk.com (role: doctor)
+2025-09-20 05:38:22,378 - api.appointments_protected - INFO - Successfully retrieved statistics: {'today': 0, 'this_week': 0, 'this_month': 0, 'by_status': {'cancelled': 1}, 'by_patient': {'Tarun Anushka': 1}}
+2025-09-20 05:38:30,218 - api.appointments_protected - INFO - Getting appointment statistics for user doctor@doctalk.com (role: doctor)
+2025-09-20 05:38:30,555 - api.appointments_protected - INFO - Successfully retrieved statistics: {'today': 0, 'this_week': 0, 'this_month': 0, 'by_status': {'cancelled': 1}, 'by_patient': {'Tarun Anushka': 1}}
+2025-09-20 05:38:36,805 - api.voice - INFO - WebSocket client disconnected
+2025-09-20 05:38:52,986 - api.appointments_protected - INFO - Getting appointment statistics for user doctor@doctalk.com (role: doctor)
+2025-09-20 05:38:53,358 - api.appointments_protected - INFO - Successfully retrieved statistics: {'today': 0, 'this_week': 0, 'this_month': 0, 'by_status': {'cancelled': 1}, 'by_patient': {'Tarun Anushka': 1}}
+2025-09-20 05:38:54,895 - api.appointments_protected - INFO - Getting appointment statistics for user doctor@doctalk.com (role: doctor)
+2025-09-20 05:38:55,200 - api.appointments_protected - INFO - Successfully retrieved statistics: {'today': 0, 'this_week': 0, 'this_month': 0, 'by_status': {'cancelled': 1}, 'by_patient': {'Tarun Anushka': 1}}
+2025-09-20 05:39:20,124 - api.appointments_protected - INFO - Getting appointment statistics for user doctor@doctalk.com (role: doctor)
+2025-09-20 05:39:20,485 - api.appointments_protected - INFO - Successfully retrieved statistics: {'today': 0, 'this_week': 0, 'this_month': 0, 'by_status': {'cancelled': 1}, 'by_patient': {'Tarun Anushka': 1}}
+2025-09-20 05:39:20,866 - api.appointments_protected - INFO - Getting appointment statistics for user doctor@doctalk.com (role: doctor)
+2025-09-20 05:39:21,199 - api.appointments_protected - INFO - Successfully retrieved statistics: {'today': 0, 'this_week': 0, 'this_month': 0, 'by_status': {'cancelled': 1}, 'by_patient': {'Tarun Anushka': 1}}
+2025-09-20 05:40:36,901 - api.voice - INFO - WebSocket client disconnected
+2025-09-20 05:41:13,893 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-20 05:41:13,967 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-20 05:41:13,967 - main - INFO - Database connection closed
+2025-09-20 05:41:28,820 - main - INFO - ✓ router loaded successfully
+2025-09-20 05:41:28,873 - main - INFO - ✓ router loaded successfully
+2025-09-20 05:41:28,884 - main - INFO - ✓ router loaded successfully
+2025-09-20 05:41:28,918 - main - INFO - ✓ router loaded successfully
+2025-09-20 05:41:29,793 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-20 05:41:29,793 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-20 05:41:30,662 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-20 05:41:31,081 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-20 05:41:31,081 - main - INFO - Database connection established
+2025-09-20 05:41:31,292 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-20 05:41:34,226 - api.appointments_protected - INFO - Getting appointment statistics for user doctor@doctalk.com (role: doctor)
+2025-09-20 05:41:34,755 - api.appointments_protected - INFO - Successfully retrieved statistics: {'today': 0, 'this_week': 0, 'this_month': 0, 'by_status': {'cancelled': 1}, 'by_patient': {'Tarun Anushka': 1}}
+2025-09-20 05:42:13,425 - services.auth_service - INFO - User authenticated successfully: dilum34@gmail.com
+2025-09-20 05:42:13,425 - services.auth_service - INFO - Tokens created for user: dilum34@gmail.com
+2025-09-20 05:42:13,425 - api.auth - INFO - User logged in: dilum34@gmail.com
+2025-09-20 05:42:13,807 - api.appointments_protected - INFO - Getting appointment statistics for user dilum34@gmail.com (role: doctor)
+2025-09-20 05:42:14,141 - api.appointments_protected - INFO - Successfully retrieved statistics: {'today': 0, 'this_week': 0, 'this_month': 0, 'by_status': {}, 'by_patient': {}}
+2025-09-20 05:50:47,998 - api.appointments_protected - INFO - Getting appointment statistics for user dilum34@gmail.com (role: doctor)
+2025-09-20 05:50:48,422 - api.appointments_protected - INFO - Successfully retrieved statistics: {'today': 0, 'this_week': 0, 'this_month': 0, 'by_status': {}, 'by_patient': {}}
+2025-09-20 05:50:55,675 - api.appointments_protected - INFO - Getting appointment statistics for user dilum34@gmail.com (role: doctor)
+2025-09-20 05:50:56,057 - api.appointments_protected - INFO - Successfully retrieved statistics: {'today': 0, 'this_week': 0, 'this_month': 0, 'by_status': {}, 'by_patient': {}}
+2025-09-20 05:51:59,815 - services.auth_service - INFO - User authenticated successfully: dilum@gmail.com
+2025-09-20 05:51:59,815 - services.auth_service - INFO - Tokens created for user: dilum@gmail.com
+2025-09-20 05:51:59,815 - api.auth - INFO - User logged in: dilum@gmail.com
+2025-09-20 05:52:00,207 - api.appointments_protected - INFO - Getting appointment statistics for user dilum@gmail.com (role: patient)
+2025-09-20 05:52:00,575 - api.appointments_protected - INFO - Successfully retrieved statistics: {'total_appointments': 0, 'upcoming': 0, 'this_month': 0, 'by_status': {}, 'by_doctor': {}}
+2025-09-20 05:56:13,724 - api.appointments_protected - INFO - Getting appointments for user dilum@gmail.com (role: patient)
+2025-09-20 05:56:13,724 - api.appointments_protected - INFO - Filtering appointments for patient: P20250917B495D7AD
+2025-09-20 05:56:13,724 - api.appointments_protected - INFO - MongoDB query: {'status': {'$ne': 'cancelled'}, 'patient_id': 'P20250917B495D7AD'}
+2025-09-20 05:56:13,805 - api.appointments_protected - INFO - Found 0 appointments
+2025-09-20 05:56:13,805 - api.appointments_protected - INFO - Successfully parsed 0 appointments
+2025-09-20 06:22:20,082 - services.auth_service - ERROR - JWT decoding error with PyJWT: Signature has expired
+2025-09-20 06:22:20,121 - services.auth_service - ERROR - JWT decoding error with python-jose: Signature has expired.
+2025-09-20 06:22:42,589 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-20 06:22:42,673 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-20 06:22:42,674 - main - INFO - Database connection closed
+2025-09-20 06:22:44,523 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:22:44,655 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:22:44,673 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:22:44,735 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:22:45,570 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-20 06:22:45,573 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-20 06:22:46,479 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-20 06:22:46,941 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-20 06:22:46,941 - main - INFO - Database connection established
+2025-09-20 06:22:47,173 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-20 06:23:26,255 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-20 06:23:26,334 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-20 06:23:26,334 - main - INFO - Database connection closed
+2025-09-20 06:23:28,024 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:23:28,079 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:23:28,089 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:23:28,117 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:23:28,880 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-20 06:23:28,885 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-20 06:23:29,701 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-20 06:23:30,158 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-20 06:23:30,158 - main - INFO - Database connection established
+2025-09-20 06:23:30,379 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-20 06:25:07,763 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-20 06:25:07,836 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-20 06:25:07,836 - main - INFO - Database connection closed
+2025-09-20 06:25:09,423 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:25:09,498 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:25:09,510 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:25:09,547 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:25:10,305 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-20 06:25:10,308 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-20 06:25:11,257 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-20 06:25:11,846 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-20 06:25:11,847 - main - INFO - Database connection established
+2025-09-20 06:25:12,116 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-20 06:25:14,508 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:25:14,572 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:25:14,585 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:25:14,618 - main - INFO - ✓ router loaded successfully
+2025-09-20 06:25:15,388 - main - INFO - ✓ Enhanced voice router loaded successfully
+2025-09-20 06:25:15,391 - main - INFO - Starting up DocTalk AI backend with authentication...
+2025-09-20 06:25:16,238 - database.mongodb - INFO - Connected to MongoDB: doctalk_ai
+2025-09-20 06:25:16,749 - database.mongodb - INFO - Database indexes created/verified successfully
+2025-09-20 06:25:16,749 - main - INFO - Database connection established
+2025-09-20 06:25:16,943 - main - INFO - Enhanced voice service initialized: {'deepgram': 'available', 'gemini': 'available', 'elevenlabs': 'available', 'database': 'unavailable'}
+2025-09-20 06:25:26,937 - main - INFO - Shutting down DocTalk AI backend...
+2025-09-20 06:25:27,015 - database.mongodb - INFO - Disconnected from MongoDB
+2025-09-20 06:25:27,015 - main - INFO - Database connection closed

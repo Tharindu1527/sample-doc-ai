@@ -16,6 +16,8 @@ import {
   RefreshCw
 } from 'lucide-react';
 import { format, parseISO, isToday, isTomorrow, isPast } from 'date-fns';
+import { makeAuthenticatedRequest, useAuth } from '../stores/authStore';
+import toast from 'react-hot-toast';
 
 interface Appointment {
   id: string;
@@ -44,6 +46,7 @@ const AppointmentsList: React.FC<AppointmentsListProps> = ({
   onCancel,
   onCreateNew 
 }) => {
+  const { user, isAuthenticated } = useAuth();
   const [appointments, setAppointments] = useState<Appointment[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -59,13 +62,20 @@ const AppointmentsList: React.FC<AppointmentsListProps> = ({
   const [showFilters, setShowFilters] = useState(false);
 
   useEffect(() => {
-    fetchAppointments();
-  }, [searchQuery, filters]);
+    if (isAuthenticated && user) {
+      fetchAppointments();
+    } else {
+      setError('Please log in to view appointments');
+      setLoading(false);
+    }
+  }, [searchQuery, filters, isAuthenticated, user]);
 
   const fetchAppointments = async () => {
     try {
       setLoading(true);
       setError(null);
+
+      console.log('Fetching appointments for user:', user?.email, 'role:', user?.role);
 
       const params = new URLSearchParams();
       if (searchQuery) params.append('q', searchQuery);
@@ -75,17 +85,28 @@ const AppointmentsList: React.FC<AppointmentsListProps> = ({
       if (filters.date_to) params.append('date_to', filters.date_to);
       
       const endpoint = searchQuery || Object.values(filters).some(f => f !== '' && f !== false) 
-        ? `/api/appointments/search/?${params.toString()}`
-        : `/api/appointments/all/?include_cancelled=${filters.include_cancelled}`;
+        ? `/api/appointments/search?${params.toString()}`
+        : `/api/appointments/all?include_cancelled=${filters.include_cancelled}`;
 
-      const response = await fetch(endpoint);
-      if (!response.ok) throw new Error('Failed to fetch appointments');
+      console.log('Making request to:', endpoint);
 
-      const data = await response.json();
+      const data = await makeAuthenticatedRequest(endpoint);
+      
+      console.log('Received appointments:', data.length);
       setAppointments(data);
     } catch (err) {
       console.error('Error fetching appointments:', err);
-      setError('Failed to load appointments');
+      const errorMessage = err instanceof Error ? err.message : 'Failed to load appointments';
+      setError(errorMessage);
+      
+      // Show specific error messages
+      if (errorMessage.includes('Authentication required')) {
+        toast.error('Please log in again');
+      } else if (errorMessage.includes('Access denied')) {
+        toast.error('You do not have permission to view these appointments');
+      } else {
+        toast.error(errorMessage);
+      }
     } finally {
       setLoading(false);
     }
@@ -95,16 +116,16 @@ const AppointmentsList: React.FC<AppointmentsListProps> = ({
     if (!window.confirm('Are you sure you want to cancel this appointment?')) return;
 
     try {
-      const response = await fetch(`/api/appointments/${appointmentId}`, {
+      await makeAuthenticatedRequest(`/api/appointments/${appointmentId}`, {
         method: 'DELETE'
       });
 
-      if (!response.ok) throw new Error('Failed to cancel appointment');
-
+      toast.success('Appointment cancelled successfully');
       await fetchAppointments(); // Refresh list
     } catch (err) {
       console.error('Error cancelling appointment:', err);
-      alert('Failed to cancel appointment');
+      const errorMessage = err instanceof Error ? err.message : 'Failed to cancel appointment';
+      toast.error(errorMessage);
     }
   };
 
@@ -271,6 +292,23 @@ const AppointmentsList: React.FC<AppointmentsListProps> = ({
     );
   };
 
+  // Show authentication error
+  if (!isAuthenticated) {
+    return (
+      <div className="text-center py-12">
+        <AlertCircle className="w-16 h-16 text-red-300 mx-auto mb-4" />
+        <h3 className="text-lg font-medium text-red-900 mb-2">Authentication Required</h3>
+        <p className="text-red-600 mb-4">Please log in to view appointments</p>
+        <button 
+          onClick={() => window.location.href = '/login'}
+          className="btn-primary"
+        >
+          Go to Login
+        </button>
+      </div>
+    );
+  }
+
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
@@ -290,6 +328,11 @@ const AppointmentsList: React.FC<AppointmentsListProps> = ({
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Appointments</h1>
             <p className="text-gray-600">{appointments.length} appointments found</p>
+            {user && (
+              <p className="text-sm text-gray-500">
+                Viewing as: {user.first_name} {user.last_name} ({user.role})
+              </p>
+            )}
           </div>
         </div>
         
@@ -307,12 +350,24 @@ const AppointmentsList: React.FC<AppointmentsListProps> = ({
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={onCreateNew}
-            className="btn-primary flex items-center space-x-2"
+            onClick={fetchAppointments}
+            className="btn-secondary flex items-center space-x-2"
           >
-            <Plus className="w-4 h-4" />
-            <span>New Appointment</span>
+            <RefreshCw className="w-4 h-4" />
+            <span>Refresh</span>
           </motion.button>
+          
+          {onCreateNew && (
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={onCreateNew}
+              className="btn-primary flex items-center space-x-2"
+            >
+              <Plus className="w-4 h-4" />
+              <span>New Appointment</span>
+            </motion.button>
+          )}
         </div>
       </div>
 
@@ -403,6 +458,8 @@ const AppointmentsList: React.FC<AppointmentsListProps> = ({
       {/* Error State */}
       {error && (
         <div className="text-center py-12">
+          <AlertCircle className="w-16 h-16 text-red-300 mx-auto mb-4" />
+          <h3 className="text-lg font-medium text-red-900 mb-2">Error Loading Appointments</h3>
           <p className="text-red-600 mb-4">{error}</p>
           <button onClick={fetchAppointments} className="btn-primary">
             Retry
@@ -418,9 +475,11 @@ const AppointmentsList: React.FC<AppointmentsListProps> = ({
               <Calendar className="w-16 h-16 text-gray-300 mx-auto mb-4" />
               <h3 className="text-lg font-medium text-gray-900 mb-2">No appointments found</h3>
               <p className="text-gray-600 mb-4">Try adjusting your search or filters</p>
-              <button onClick={onCreateNew} className="btn-primary">
-                Schedule New Appointment
-              </button>
+              {onCreateNew && (
+                <button onClick={onCreateNew} className="btn-primary">
+                  Schedule New Appointment
+                </button>
+              )}
             </div>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">

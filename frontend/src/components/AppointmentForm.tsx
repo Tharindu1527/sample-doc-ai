@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calendar, Clock, User, Phone, Save, AlertCircle } from 'lucide-react';
+import { makeAuthenticatedRequest, useAuth } from '../stores/authStore';
+import { UserRole } from '../types/auth';
 import toast from 'react-hot-toast';
 
 interface Doctor {
@@ -48,6 +50,7 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
   appointment,
   onSave
 }) => {
+  const { user, isAuthenticated } = useAuth();
   const [formData, setFormData] = useState<Appointment>({
     patient_id: '',
     patient_name: '',
@@ -69,15 +72,17 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
   const [showPatientDropdown, setShowPatientDropdown] = useState(false);
 
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && isAuthenticated) {
       fetchDoctors();
-      fetchPatients();
+      if (user?.role !== UserRole.PATIENT) {
+        fetchPatients();
+      }
       
       if (appointment) {
         setFormData(appointment);
       } else {
         // Reset form for new appointment
-        setFormData({
+        const initialData: Appointment = {
           patient_id: '',
           patient_name: '',
           patient_phone: '',
@@ -88,32 +93,42 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
           status: 'scheduled',
           reason: '',
           notes: ''
-        });
+        };
+
+        // If user is a patient, pre-fill their information
+        if (user?.role === UserRole.PATIENT) {
+          initialData.patient_id = user.patient_id || '';
+          initialData.patient_name = `${user.first_name} ${user.last_name}`;
+          initialData.patient_email = user.email;
+          initialData.patient_phone = user.phone || '';
+        }
+
+        setFormData(initialData);
       }
     }
-  }, [isOpen, appointment]);
+  }, [isOpen, appointment, isAuthenticated, user]);
 
   const fetchDoctors = async () => {
     try {
-      const response = await fetch('/api/doctors/available');
-      if (response.ok) {
-        const data = await response.json();
-        setDoctors(data);
-      }
+      console.log('Fetching doctors...');
+      const data = await makeAuthenticatedRequest('/api/doctors/available');
+      console.log('Doctors fetched:', data.length);
+      setDoctors(data);
     } catch (error) {
       console.error('Error fetching doctors:', error);
+      toast.error('Failed to load doctors');
     }
   };
 
   const fetchPatients = async () => {
     try {
-      const response = await fetch('/api/patients/');
-      if (response.ok) {
-        const data = await response.json();
-        setPatients(data);
-      }
+      console.log('Fetching patients...');
+      const data = await makeAuthenticatedRequest('/api/patients/');
+      console.log('Patients fetched:', data.length);
+      setPatients(data);
     } catch (error) {
       console.error('Error fetching patients:', error);
+      toast.error('Failed to load patients');
     }
   };
 
@@ -157,6 +172,11 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
       return;
     }
 
+    if (!isAuthenticated) {
+      toast.error('Please log in to create appointments');
+      return;
+    }
+
     setLoading(true);
     
     try {
@@ -165,26 +185,22 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
         ? `/api/appointments/${appointment.id}`
         : '/api/appointments/';
 
-      const response = await fetch(url, {
+      console.log('Submitting appointment:', formData);
+      console.log('Request method:', method, 'URL:', url);
+
+      const savedAppointment = await makeAuthenticatedRequest(url, {
         method,
-        headers: {
-          'Content-Type': 'application/json',
-        },
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        const savedAppointment = await response.json();
-        onSave(savedAppointment);
-        toast.success(appointment?.id ? 'Appointment updated successfully!' : 'Appointment created successfully!');
-        onClose();
-      } else {
-        const errorData = await response.json();
-        toast.error(errorData.detail || 'Failed to save appointment');
-      }
+      console.log('Appointment saved:', savedAppointment);
+      onSave(savedAppointment);
+      toast.success(appointment?.id ? 'Appointment updated successfully!' : 'Appointment created successfully!');
+      onClose();
     } catch (error) {
       console.error('Error saving appointment:', error);
-      toast.error('Failed to save appointment');
+      const errorMessage = error instanceof Error ? error.message : 'Failed to save appointment';
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -207,6 +223,41 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
   );
 
   if (!isOpen) return null;
+
+  // Show authentication error
+  if (!isAuthenticated) {
+    return (
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+          onClick={onClose}
+        >
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.95, opacity: 0 }}
+            className="bg-white rounded-2xl shadow-xl max-w-md w-full p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="text-center">
+              <AlertCircle className="w-16 h-16 text-red-300 mx-auto mb-4" />
+              <h2 className="text-xl font-bold text-red-900 mb-2">Authentication Required</h2>
+              <p className="text-red-600 mb-4">Please log in to create appointments</p>
+              <button
+                onClick={() => window.location.href = '/login'}
+                className="btn-primary w-full"
+              >
+                Go to Login
+              </button>
+            </div>
+          </motion.div>
+        </motion.div>
+      </AnimatePresence>
+    );
+  }
 
   return (
     <AnimatePresence>
@@ -237,6 +288,11 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
                 <p className="text-sm text-gray-600">
                   {appointment?.id ? 'Update appointment details' : 'Schedule a new appointment'}
                 </p>
+                {user && (
+                  <p className="text-xs text-gray-500">
+                    Creating as: {user.first_name} {user.last_name} ({user.role})
+                  </p>
+                )}
               </div>
             </div>
             <button
@@ -249,92 +305,117 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="p-6 space-y-6">
-            {/* Patient Selection */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-                <User className="w-5 h-5 mr-2" />
-                Patient Information
-              </h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="relative">
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Patient Name *
-                  </label>
-                  <input
-                    type="text"
-                    value={searchPatient || formData.patient_name}
-                    onChange={(e) => {
-                      setSearchPatient(e.target.value);
-                      setFormData({ ...formData, patient_name: e.target.value });
-                      setShowPatientDropdown(true);
-                    }}
-                    onFocus={() => setShowPatientDropdown(true)}
-                    className={`w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      errors.patient_name ? 'border-red-500' : 'border-gray-300'
-                    }`}
-                    placeholder="Search or enter patient name"
-                  />
-                  
-                  {/* Patient Dropdown */}
-                  {showPatientDropdown && filteredPatients.length > 0 && (
-                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-48 overflow-y-auto">
-                      {filteredPatients.slice(0, 5).map((patient) => (
-                        <button
-                          key={patient.id}
-                          type="button"
-                          onClick={() => handlePatientSelect(patient)}
-                          className="w-full text-left px-3 py-2 hover:bg-blue-50 border-b border-gray-100 last:border-b-0"
-                        >
-                          <div className="font-medium">{patient.first_name} {patient.last_name}</div>
-                          <div className="text-sm text-gray-500">ID: {patient.patient_id}</div>
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                  
-                  {errors.patient_name && (
-                    <p className="text-red-500 text-sm mt-1">{errors.patient_name}</p>
-                  )}
+            {/* Patient Selection - Only show for doctors and admins */}
+            {user?.role !== UserRole.PATIENT && (
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+                  <User className="w-5 h-5 mr-2" />
+                  Patient Information
+                </h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="relative">
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Patient Name *
+                    </label>
+                    <input
+                      type="text"
+                      value={searchPatient || formData.patient_name}
+                      onChange={(e) => {
+                        setSearchPatient(e.target.value);
+                        setFormData({ ...formData, patient_name: e.target.value });
+                        setShowPatientDropdown(true);
+                      }}
+                      onFocus={() => setShowPatientDropdown(true)}
+                      className={`w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                        errors.patient_name ? 'border-red-500' : 'border-gray-300'
+                      }`}
+                      placeholder="Search or enter patient name"
+                    />
+                    
+                    {/* Patient Dropdown */}
+                    {showPatientDropdown && filteredPatients.length > 0 && (
+                      <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-48 overflow-y-auto">
+                        {filteredPatients.slice(0, 5).map((patient) => (
+                          <button
+                            key={patient.id}
+                            type="button"
+                            onClick={() => handlePatientSelect(patient)}
+                            className="w-full text-left px-3 py-2 hover:bg-blue-50 border-b border-gray-100 last:border-b-0"
+                          >
+                            <div className="font-medium">{patient.first_name} {patient.last_name}</div>
+                            <div className="text-sm text-gray-500">ID: {patient.patient_id}</div>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                    
+                    {errors.patient_name && (
+                      <p className="text-red-500 text-sm mt-1">{errors.patient_name}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Patient Phone
+                    </label>
+                    <input
+                      type="tel"
+                      value={formData.patient_phone}
+                      onChange={(e) => setFormData({ ...formData, patient_phone: e.target.value })}
+                      className={`w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                        errors.patient_phone ? 'border-red-500' : 'border-gray-300'
+                      }`}
+                      placeholder="+1 (555) 123-4567"
+                    />
+                    {errors.patient_phone && (
+                      <p className="text-red-500 text-sm mt-1">{errors.patient_phone}</p>
+                    )}
+                  </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Patient Phone
+                    Patient Email
                   </label>
                   <input
-                    type="tel"
-                    value={formData.patient_phone}
-                    onChange={(e) => setFormData({ ...formData, patient_phone: e.target.value })}
+                    type="email"
+                    value={formData.patient_email}
+                    onChange={(e) => setFormData({ ...formData, patient_email: e.target.value })}
                     className={`w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      errors.patient_phone ? 'border-red-500' : 'border-gray-300'
+                      errors.patient_email ? 'border-red-500' : 'border-gray-300'
                     }`}
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="patient@example.com"
                   />
-                  {errors.patient_phone && (
-                    <p className="text-red-500 text-sm mt-1">{errors.patient_phone}</p>
+                  {errors.patient_email && (
+                    <p className="text-red-500 text-sm mt-1">{errors.patient_email}</p>
                   )}
                 </div>
               </div>
+            )}
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Patient Email
-                </label>
-                <input
-                  type="email"
-                  value={formData.patient_email}
-                  onChange={(e) => setFormData({ ...formData, patient_email: e.target.value })}
-                  className={`w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                    errors.patient_email ? 'border-red-500' : 'border-gray-300'
-                  }`}
-                  placeholder="patient@example.com"
-                />
-                {errors.patient_email && (
-                  <p className="text-red-500 text-sm mt-1">{errors.patient_email}</p>
-                )}
+            {/* Patient info display for patients */}
+            {user?.role === UserRole.PATIENT && (
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+                  <User className="w-5 h-5 mr-2" />
+                  Patient Information
+                </h3>
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <p className="text-sm text-blue-800">
+                    <strong>Patient:</strong> {formData.patient_name}
+                  </p>
+                  <p className="text-sm text-blue-800">
+                    <strong>Email:</strong> {formData.patient_email}
+                  </p>
+                  {formData.patient_phone && (
+                    <p className="text-sm text-blue-800">
+                      <strong>Phone:</strong> {formData.patient_phone}
+                    </p>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Appointment Details */}
             <div className="space-y-4">
@@ -412,6 +493,7 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
                     value={formData.status}
                     onChange={(e) => setFormData({ ...formData, status: e.target.value })}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    disabled={user?.role === UserRole.PATIENT}
                   >
                     <option value="scheduled">Scheduled</option>
                     <option value="confirmed">Confirmed</option>

@@ -5,8 +5,7 @@ from fastapi import APIRouter, HTTPException, Query, Depends
 from models.appointment import AppointmentCreate, AppointmentUpdate, AppointmentResponse
 from models.user import UserResponse, UserRole
 from services.appointment_service import appointment_service
-from api.auth import get_current_user, require_role
-from middleware.auth_middleware import check_appointment_access
+from middleware.auth_middleware import auth_middleware, check_appointment_access
 from database.mongodb import get_database
 import logging
 
@@ -14,12 +13,17 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/appointments", tags=["appointments"])
 
+# Use the auth middleware methods directly
+get_current_user = auth_middleware.require_auth
+
 @router.get("/statistics")
 async def get_appointment_statistics(
     current_user: UserResponse = Depends(get_current_user)
 ):
     """Get appointment statistics based on user role"""
     try:
+        logger.info(f"Getting appointment statistics for user {current_user.email} with role {current_user.role}")
+        
         if current_user.role == UserRole.ADMIN:
             # Admin sees all statistics
             result = await appointment_service.get_appointment_statistics()
@@ -52,6 +56,8 @@ async def search_appointments(
 ):
     """Search appointments with role-based filtering"""
     try:
+        logger.info(f"Searching appointments for user {current_user.email} with role {current_user.role}")
+        
         filters = {}
         if status:
             filters['status'] = status
@@ -90,6 +96,8 @@ async def get_all_appointments(
 ):
     """Get appointments based on user role"""
     try:
+        logger.info(f"Getting all appointments for user {current_user.email} with role {current_user.role}")
+        
         db = get_database()
         query = {}
         
@@ -99,12 +107,21 @@ async def get_all_appointments(
         # Role-based filtering
         if current_user.role == UserRole.DOCTOR:
             query["doctor_name"] = f"Dr. {current_user.first_name} {current_user.last_name}"
+            logger.info(f"Doctor filter: {query['doctor_name']}")
         elif current_user.role == UserRole.PATIENT:
+            if not current_user.patient_id:
+                logger.error(f"Patient {current_user.email} has no patient_id")
+                raise HTTPException(status_code=400, detail="Patient ID not found")
             query["patient_id"] = current_user.patient_id
+            logger.info(f"Patient filter: {query['patient_id']}")
         # Admin sees all appointments (no additional filter)
+        
+        logger.info(f"MongoDB query: {query}")
         
         cursor = db["appointments"].find(query).skip(skip).limit(limit).sort("appointment_date", -1)
         appointments = await cursor.to_list(length=limit)
+        
+        logger.info(f"Found {len(appointments)} appointments")
         
         result = []
         for appointment in appointments:
@@ -125,6 +142,8 @@ async def create_appointment(
 ):
     """Create a new appointment with role-based validation"""
     try:
+        logger.info(f"Creating appointment for user {current_user.email} with role {current_user.role}")
+        
         # Validate based on user role
         if current_user.role == UserRole.PATIENT:
             # Patients can only book for themselves
@@ -140,6 +159,7 @@ async def create_appointment(
         # Admin can create appointments for anyone
         
         result = await appointment_service.create_appointment(appointment)
+        logger.info(f"Appointment created successfully: {result.id}")
         return result
     except Exception as e:
         logger.error(f"Error creating appointment: {e}")

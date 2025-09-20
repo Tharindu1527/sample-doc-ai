@@ -37,68 +37,77 @@ const makeAuthenticatedRequest = async (url: string, options: RequestInit = {}) 
   const state = useAuthStore.getState();
   const token = state.accessToken;
 
+  if (!token) {
+    console.error('No access token available for authenticated request');
+    throw new Error('Authentication required. Please log in again.');
+  }
+
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
+    'Authorization': `Bearer ${token}`,
     ...((options.headers as Record<string, string>) || {}),
   };
 
-  // Always include the Authorization header if we have a token
-  if (token) {
-    headers['Authorization'] = `Bearer ${token}`;
-    console.log('Adding Authorization header with token:', token.substring(0, 20) + '...');
-  } else {
-    console.warn('No access token available for request to:', url);
-  }
-
-  console.log(`Making authenticated request to: ${API_BASE_URL}${url}`);
-  console.log('Headers:', headers);
+  console.log(`Making authenticated request to: ${url}`);
   
-  const response = await fetch(`${API_BASE_URL}${url}`, {
-    ...options,
-    headers,
-  });
+  try {
+    const response = await fetch(`${API_BASE_URL}${url}`, {
+      ...options,
+      headers,
+    });
 
-  console.log(`Response status: ${response.status} ${response.statusText}`);
+    console.log(`Response status: ${response.status} ${response.statusText}`);
 
-  // Handle token expiration
-  if (response.status === 401) {
-    console.log('Token expired, attempting refresh...');
-    try {
-      await state.refreshTokens();
-      // Retry the request with new token
-      const newState = useAuthStore.getState();
-      const newToken = newState.accessToken;
-      
-      if (newToken) {
-        headers['Authorization'] = `Bearer ${newToken}`;
-        console.log('Retrying request with refreshed token');
+    // Handle token expiration
+    if (response.status === 401) {
+      console.log('Token expired, attempting refresh...');
+      try {
+        await state.refreshTokens();
+        // Retry the request with new token
+        const newState = useAuthStore.getState();
+        const newToken = newState.accessToken;
         
-        const retryResponse = await fetch(`${API_BASE_URL}${url}`, {
-          ...options,
-          headers,
-        });
-        
-        if (!retryResponse.ok) {
-          const errorData = await retryResponse.json().catch(() => ({ detail: 'An error occurred' }));
-          throw new Error(errorData.detail || `HTTP ${retryResponse.status}: ${retryResponse.statusText}`);
+        if (newToken) {
+          headers['Authorization'] = `Bearer ${newToken}`;
+          console.log('Retrying request with refreshed token');
+          
+          const retryResponse = await fetch(`${API_BASE_URL}${url}`, {
+            ...options,
+            headers,
+          });
+          
+          if (!retryResponse.ok) {
+            const errorData = await retryResponse.json().catch(() => ({ detail: 'An error occurred' }));
+            throw new Error(errorData.detail || `HTTP ${retryResponse.status}: ${retryResponse.statusText}`);
+          }
+          
+          return retryResponse.json();
+        } else {
+          throw new Error('Failed to refresh token');
         }
-        
-        return retryResponse.json();
+      } catch (refreshError) {
+        console.error('Token refresh failed:', refreshError);
+        // Force logout if refresh fails
+        state.logout();
+        window.location.href = '/login';
+        throw new Error('Session expired. Please log in again.');
       }
-    } catch (refreshError) {
-      console.error('Token refresh failed:', refreshError);
-      // Force logout if refresh fails
-      state.logout();
-      throw new Error('Session expired. Please log in again.');
     }
-  }
 
-  if (!response.ok) {
-    const errorData = await response.json().catch(() => ({ detail: 'An error occurred' }));
-    throw new Error(errorData.detail || `HTTP ${response.status}: ${response.statusText}`);
-  }
+    if (response.status === 403) {
+      throw new Error('Access denied. You do not have permission to perform this action.');
+    }
 
-  return response.json();
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({ detail: 'An error occurred' }));
+      throw new Error(errorData.detail || `HTTP ${response.status}: ${response.statusText}`);
+    }
+
+    return response.json();
+  } catch (error) {
+    console.error('Authenticated request failed:', error);
+    throw error;
+  }
 };
 
 // Create a version that doesn't require authentication for login/register
@@ -108,7 +117,7 @@ const makePublicRequest = async (url: string, options: RequestInit = {}) => {
     ...((options.headers as Record<string, string>) || {}),
   };
 
-  console.log(`Making public request to: ${API_BASE_URL}${url}`);
+  console.log(`Making public request to: ${url}`);
   
   const response = await fetch(`${API_BASE_URL}${url}`, {
     ...options,
@@ -176,21 +185,12 @@ export const useAuthStore = create<AuthStore>()(
         try {
           set({ isLoading: true, error: null });
 
-          console.log('Registration data:', data);
-
           const response = await makePublicRequest('/api/auth/register', {
             method: 'POST',
             body: JSON.stringify(data),
           });
 
           console.log('Registration response:', response);
-
-          // Update state with new user
-          set({
-            user: response,
-            isLoading: false,
-            error: null,
-          });
 
           // After registration, automatically log in
           await get().login(data.email, data.password);
@@ -288,6 +288,7 @@ export const useAuthStore = create<AuthStore>()(
           const { accessToken } = get();
           if (!accessToken) {
             console.log('No access token available for auth check');
+            set({ isAuthenticated: false });
             return;
           }
 
@@ -304,14 +305,13 @@ export const useAuthStore = create<AuthStore>()(
           });
         } catch (error) {
           console.log('Auth check failed:', error);
-          // If auth check fails, try refresh token
-          try {
-            await get().refreshTokens();
-            await get().checkAuth();
-          } catch (refreshError) {
-            console.log('Token refresh failed during auth check, logging out');
-            get().logout();
-          }
+          // Clear authentication state
+          set({
+            user: null,
+            accessToken: null,
+            refreshToken: null,
+            isAuthenticated: false,
+          });
         }
       },
 

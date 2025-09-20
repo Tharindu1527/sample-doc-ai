@@ -376,7 +376,6 @@ class AppointmentService:
             logger.error(f"Error creating appointment: {e}")
             return None
 
-    # Keep all existing methods from the original appointment_service.py
     async def create_appointment(self, appointment_data: AppointmentCreate) -> AppointmentResponse:
         """Create a new appointment"""
         try:
@@ -541,6 +540,8 @@ class AppointmentService:
                     if 'appointment_date' not in mongo_query:
                         mongo_query['appointment_date'] = {}
                     mongo_query['appointment_date']['$lte'] = filters['date_to']
+                if filters.get('patient_id'):
+                    mongo_query['patient_id'] = filters['patient_id']
             
             cursor = db[self.collection_name].find(mongo_query).sort("appointment_date", 1)
             appointments = await cursor.to_list(length=100)  # Limit to 100 results
@@ -607,6 +608,121 @@ class AppointmentService:
             
         except Exception as e:
             logger.error(f"Error getting appointment statistics: {e}")
+            return {}
+
+    async def get_doctor_appointment_statistics(self, doctor_name: str) -> Dict[str, Any]:
+        """Get appointment statistics for a specific doctor"""
+        try:
+            db = get_database()
+            
+            # Get current date range
+            today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+            tomorrow = today + timedelta(days=1)
+            week_start = today - timedelta(days=today.weekday())
+            month_start = today.replace(day=1)
+            
+            # Base query for this doctor
+            base_query = {"doctor_name": doctor_name}
+            
+            stats = {}
+            
+            # Today's appointments
+            stats['today'] = await db[self.collection_name].count_documents({
+                **base_query,
+                "appointment_date": {"$gte": today, "$lt": tomorrow},
+                "status": {"$nin": ["cancelled"]}
+            })
+            
+            # This week's appointments
+            stats['this_week'] = await db[self.collection_name].count_documents({
+                **base_query,
+                "appointment_date": {"$gte": week_start},
+                "status": {"$nin": ["cancelled"]}
+            })
+            
+            # This month's appointments
+            stats['this_month'] = await db[self.collection_name].count_documents({
+                **base_query,
+                "appointment_date": {"$gte": month_start},
+                "status": {"$nin": ["cancelled"]}
+            })
+            
+            # Status distribution for this doctor
+            status_pipeline = [
+                {"$match": base_query},
+                {"$group": {"_id": "$status", "count": {"$sum": 1}}}
+            ]
+            status_results = await db[self.collection_name].aggregate(status_pipeline).to_list(length=None)
+            stats['by_status'] = {item['_id']: item['count'] for item in status_results}
+            
+            # Total appointments for this doctor
+            stats['total_appointments'] = await db[self.collection_name].count_documents(base_query)
+            
+            return stats
+            
+        except Exception as e:
+            logger.error(f"Error getting doctor appointment statistics: {e}")
+            return {}
+
+    async def get_patient_appointment_statistics(self, patient_id: str) -> Dict[str, Any]:
+        """Get appointment statistics for a specific patient"""
+        try:
+            db = get_database()
+            
+            # Get current date range
+            today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+            tomorrow = today + timedelta(days=1)
+            week_start = today - timedelta(days=today.weekday())
+            month_start = today.replace(day=1)
+            
+            # Base query for this patient
+            base_query = {"patient_id": patient_id}
+            
+            stats = {}
+            
+            # Today's appointments
+            stats['today'] = await db[self.collection_name].count_documents({
+                **base_query,
+                "appointment_date": {"$gte": today, "$lt": tomorrow},
+                "status": {"$nin": ["cancelled"]}
+            })
+            
+            # This week's appointments
+            stats['this_week'] = await db[self.collection_name].count_documents({
+                **base_query,
+                "appointment_date": {"$gte": week_start},
+                "status": {"$nin": ["cancelled"]}
+            })
+            
+            # This month's appointments
+            stats['this_month'] = await db[self.collection_name].count_documents({
+                **base_query,
+                "appointment_date": {"$gte": month_start},
+                "status": {"$nin": ["cancelled"]}
+            })
+            
+            # Status distribution for this patient
+            status_pipeline = [
+                {"$match": base_query},
+                {"$group": {"_id": "$status", "count": {"$sum": 1}}}
+            ]
+            status_results = await db[self.collection_name].aggregate(status_pipeline).to_list(length=None)
+            stats['by_status'] = {item['_id']: item['count'] for item in status_results}
+            
+            # Total appointments for this patient
+            stats['total_appointments'] = await db[self.collection_name].count_documents(base_query)
+            
+            # Upcoming appointments
+            stats['upcoming'] = await db[self.collection_name].count_documents({
+                **base_query,
+                "appointment_date": {"$gte": today},
+                "status": {"$nin": ["cancelled", "completed"]}
+            })
+            
+            return stats
+            
+        except Exception as e:
+            logger.error(f"Error getting patient appointment statistics: {e}")
             return {}
 
     def validate_appointment_data(self, data: Dict[str, Any]) -> Dict[str, Any]:
